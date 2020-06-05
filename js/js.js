@@ -1,4 +1,5 @@
 jQuery(document).ready(function($) {
+
     $("#btn-animate-top").click(function() {
         $('#div-animate-top').toggleClass("w3-animate-top");
     });
@@ -18,25 +19,14 @@ jQuery(document).ready(function($) {
         $('#div-animate-zoom').toggleClass("animate-zoom");
     });
     // ===============================================
+
     $("#btn-animate-all").click(function() {
+
         $('#img-animate-top').toggleClass("animate-top");
         $('#img-animate-zoom').toggleClass("animate-zoom");
         $('#img-animate-left').toggleClass("animate-left");
         $('#img-animate-bottom').toggleClass("animate-bottom");
+
     });
-    // $("#btn-animate-zoom").click(function() {
-    //     $('#div-animate-zoom').toggleClass(" w3-animate-zoom");
-    // });
-    // $("#btn-animate-zoom").click(function() {
-    //     $('#div-animate-zoom').toggleClass(" w3-animate-zoom");
-    // });
-    // $("#btn-animate-zoom").click(function() {
-    //     $('#div-animate-zoom').toggleClass(" w3-animate-zoom");
-    // });
-    // $("#btn-animate-zoom").click(function() {
-    //     $('#div-animate-zoom').toggleClass(" w3-animate-zoom");
-    // });
-    // $("#btn-animate-zoom").click(function() {
-    //     $('#div-animate-zoom').toggleClass(" w3-animate-zoom");
-    // });
+
 });
