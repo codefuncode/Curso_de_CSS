@@ -1,12 +1,15 @@
-
-
-
+=====================================================================
+Nota 
+Modulo 01-003 en proseso 
+=====================================================================
 Tutorial CSS
 CSS HOME
 Introducción a CSS
 Sintaxis CSS
 Selectores CSS
-CSS Cómo
+Cómo agregar CSS
+
+
 Comentarios CSS
 Colores CSS
 Fondos CSS
@@ -85,26 +88,6 @@ Introducción a la cuadrícula
 Contenedor de rejilla
 Artículo de cuadrícula
 
-Ejemplos CSS
-Plantillas CSS
-Ejemplos CSS
-CSS Quiz
-Ejercicios CSS
-Certificado CSS
-
-Referencias CSS
-Referencia CSS
-Selectores CSS
-Funciones CSS
-Referencia de CSS Aural
-Fuentes CSS Web Safe
-CSS Animatable
-Unidades CSS
-Convertidor CSS PX-EM
-Colores CSS
-Valores de color CSS
-Valores predeterminados de CSS
-Soporte de navegador CSS
 =================================================================
 
 CSS - Inicio

@@ -1,0 +1,132 @@
+Selectores CSS
+
+Los selectores CSS se utilizan para 'encontrar' (o seleccionar) los elementos HTML que desea diseñar.
+
+Podemos dividir los selectores CSS en cinco categorías:
+
+Selectores simples 
+(seleccione elementos basados ​​en nombre, id, clase)
+Selectores de combinador 
+(seleccione elementos basados ​​en una relación específica entre ellos)
+Selectores de pseudo-clase 
+(seleccione elementos basados ​​en un estado determinado)
+Selectores de pseudoelementos (seleccionar y diseñar una parte de un elemento)
+Selectores de atributos 
+(seleccione elementos basados ​​en un atributo o valor de atributo)
+
+
+
+https://www.w3schools.com/cssref/css_selectors.asp 
+Pseudo Classes
+
+:active 				a:active 	
+:checked 				input:checked 	
+:disabled 				input:disabled 	
+:empty 					p:empty 	
+:first-child 			p:first-child 	
+:first-of-type 			p:first-of-type 	
+:focus 					input:focus 	
+:hover 					a:hover 	
+:in-range 				input:in-range 	
+:invalid 				input:invalid 	
+:lang(language) 		p:lang(it) 	
+:last-child 			p:last-child 	
+:last-of-type 			p:last-of-type 	
+:link 					a:link 	
+:not(selector) 			:not(p) 	
+:nth-child(n) 			p:nth-child(2) 	
+:nth-last-child(n) 		p:nth-last-child(2) 	
+:nth-last-of-type(n) 	p:nth-last-of-type(2) 	
+:nth-of-type(n) 		p:nth-of-type(2) 	
+:only-of-type 			p:only-of-type 
+:only-child 			p:only-child 	
+:optional 				input:optional 	
+:out-of-range 			input:out-of-range 
+:read-only 				input:read-only 	
+:read-write 			input:read-write 	
+:required 				input:required 	
+:root 					root 	
+:target 				#news:target 	
+:valid 					input:valid 	
+:visited 				a:visited 	
+
+
+=================================================
+Pseudo Elements
+
+::after 				p::after 	
+::before 				p::before 	
+::first-letter 			p::first-letter 	
+::first-line 			p::first-line 	
+::selection 			p::selection 	
+
+
+
+
+======================================================
+https://developer.mozilla.org/es/docs/Web/CSS/Selectores_CSS
+------------------------------------------------------
+https://developer.mozilla.org/es/docs/Web/CSS/Referencia_CSS
+
+
+Selectores básicos
+
+Selector universal
+    Selecciona todos los elementos. Opcionalmente, puede estar restringido a un espacio de nombres específico o a todos los espacios de nombres.
+    Sintaxis: * ns | * * | *
+    Ejemplo: * coincidirá con todos los elementos del documento.
+Selector de tipo
+    Selecciona todos los elementos que tienen el nombre de nodo dado.
+    Sintaxis: elementname
+    Ejemplo: la entrada coincidirá con cualquier elemento de entrada.
+Selector de clase
+    Selecciona todos los elementos que tienen el atributo de clase dado.
+    Sintaxis: .classname
+    Ejemplo: .index coincidirá con cualquier elemento que tenga una clase de 'índice'.
+Selector de ID
+    Selecciona un elemento en función del valor de su atributo id. Debe haber solo un elemento con una ID dada en un documento.
+    Sintaxis: #idname
+    Ejemplo: #toc coincidirá con el elemento que tiene la identificación 'toc'.
+Selector de atributos
+    Selecciona todos los elementos que tienen el atributo dado.
+    Sintaxis: [attr] [attr = value] [attr ~ = value] [attr | = value] [attr ^ = value] [attr $ = value] [attr * = value]
+    Ejemplo: [reproducción automática] coincidirá con todos los elementos que tengan establecido el atributo de reproducción automática (a cualquier valor).
+
+Selectores de agrupamiento
+
+Lista de selectores
+    El, es un método de agrupación, selecciona todos los nodos coincidentes.
+    Sintaxis: A, B
+    Ejemplo: div, span coincidirá con los elementos span y div.
+
+Combinadores
+
+Combinador descendiente
+    El combinador (espacio) selecciona los nodos que son descendientes del primer elemento.
+    Sintaxis: A B
+    Ejemplo: div span coincidirá con todos los elementos de span que están dentro de un elemento div.
+Combinador de niños
+    El combinador selecciona nodos que son hijos directos del primer elemento.
+    Sintaxis: A B
+    Ejemplo: ul li coincidirá con todos los elementos li que están anidados directamente dentro de un elemento ul.
+Combinador general de hermanos
+    El ~ combinador selecciona hermanos. Esto significa que el segundo elemento sigue al primero (aunque no necesariamente de forma inmediata), y ambos comparten el mismo padre.
+    Sintaxis: A ~ B
+    Ejemplo: p ~ span coincidirá con todos los elementos de span que siguen a p, inmediatamente o no.
+Combinador de hermanos adyacentes
+    El combinador + selecciona hermanos adyacentes. Esto significa que el segundo elemento sigue directamente al primero, y ambos comparten el mismo padre.
+    Sintaxis: A + B
+    Ejemplo: h2 + p coincidirá con todos los elementos p que siguen directamente a h2.
+Combinador de columna
+    El || El combinador selecciona nodos que pertenecen a una columna.
+    Sintaxis: A || si
+    Ejemplo: col || td coincidirá con todos los elementos td que pertenecen al alcance de la columna.
+
+Seudo
+
+Pseudo clases
+    El: pseudo permite la selección de elementos basados ​​en información de estado que no está contenida en el árbol del documento.
+    Ejemplo: a: visitado coincidirá con todos los elementos que ha visitado el usuario.
+Pseudo elementos
+    Los :: pseudo representan entidades que no están incluidas en HTML.
+    Ejemplo: p :: primera línea coincidirá con la primera línea de todos los elementos p.
