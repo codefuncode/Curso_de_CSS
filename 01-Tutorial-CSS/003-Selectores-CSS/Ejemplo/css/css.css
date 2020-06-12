@@ -134,6 +134,12 @@ a:active {
 
 El selector: disabled deshabilita cada elemento deshabilitado (utilizado principalmente en elementos de formulario).*/
 
+/*Selector de atributos
+    Selecciona todos los elementos que tienen el atributo dado.
+    Sintaxis: [attr] [attr = value] [attr ~ = value] [attr | = value] [attr ^ = value] [attr $ = value] [attr * = value]
+    Ejemplo: [reproducción automática] coincidirá con todos los elementos que tengan establecido el atributo de reproducción 
+    automática (a cualquier valor).*/
+
 input[type=text]:enabled {
     background: #ffff00;
 }

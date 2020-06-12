@@ -8,8 +8,6 @@ Introducción a CSS
 Sintaxis CSS
 Selectores CSS
 Cómo agregar CSS
-
-
 Comentarios CSS
 Colores CSS
 Fondos CSS
