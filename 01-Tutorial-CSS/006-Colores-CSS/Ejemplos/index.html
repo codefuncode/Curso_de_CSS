@@ -2,15 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <style type="text/css">
-      #rangecolor{
-        width: 500px;
-        height: 100px;
-        border:2px solid black;
-        margin-bottom: 50px;
-
-      }
-    </style>
+    <link href="css/css.css" rel="stylesheet" type="text/css"/>
     <title>
       Documento
     </title>
@@ -55,12 +47,108 @@
     <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">
       Elemento
     </h1>
-    <div id="rangecolor">
+    <div class="coloresfuncion">
+      <div class="contenedor">
+        <div class="caja">
+          <div id="rgbbgcolor">
+            <div class="">
+              <p>
+                <span>
+                </span>
+                <span>
+                </span>
+                <span>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="caja">
+          <div id="rgbbordercolor">
+            <div class="">
+              <p>
+                <span>
+                </span>
+                <span>
+                </span>
+                <span>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="caja">
+          <div id="rgbtextcolor">
+            <div class="">
+              <p>
+                <span>
+                </span>
+                <span>
+                </span>
+                <span>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rgbboton">
+        <input max="255" min="0" name="points" type="range"/>
+        <input max="255" min="0" name="points" type="range"/>
+        <input max="255" min="0" name="points" type="range"/>
+        <input class="reset" name="" type="button" value="Reset"/>
+      </div>
+      <div class="contenedor">
+        <div class="caja">
+          <div id="hexbgcolor">
+            <div class="">
+              <p>
+                <span>
+                </span>
+                <span>
+                </span>
+                <span>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="caja">
+          <div id="hexbordercolor">
+            <div class="">
+              <p>
+                <span>
+                </span>
+                <span>
+                </span>
+                <span>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="caja">
+          <div id="hextextcolor">
+            <div class="">
+              <p>
+                <span>
+                </span>
+                <span>
+                </span>
+                <span>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hexboton">
+        <input max="255" min="0" name="points" type="range"/>
+        <input max="255" min="0" name="points" type="range"/>
+        <input max="255" min="0" name="points" type="range"/>
+        <input class="reset" name="" type="button" value="Reset"/>
+      </div>
     </div>
-    <input max="255" min="0" name="points" type="range"/>
-    <input max="255" min="0" name="points" type="range"/>
-    <input max="255" min="0" name="points" type="range"/>
-    <input id="reset" name="" type="button" value="Reset"/>
     <script src="js/js.js" type="text/javascript">
     </script>
   </body>

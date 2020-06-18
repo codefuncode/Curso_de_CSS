@@ -1,266 +1,47 @@
-* {
-    color: AliceBlue;
-    color: #F0F8FF;
-    /**/
-    color: AntiqueWhite;
-    color: #FAEBD7;
-    /**/
-    color: Aqua;
-    color: #00FFFF;
-    /**/
-    color: Aquamarine;
-    color: #7FFFD4;
-    /**/
-    color: Azure;
-    color: #F0FFFF;
-    /**/
-    color: Beige;
-    color: #F5F5DC;
-    /**/
-    color: Bisque;
-    color: #FFE4C4;
-    /**/
-    color: Black;
-    color: #000000;
-    /**/
-    color: BlanchedAlmond;
-    color: #FFEBCD;
-    /**/
-    color: Blue;
-    color: #0000FF;
-    /**/
-    color: BlueViolet;
-    color: #8A2BE2;
-    /**/
-    color: Brown;
-    color: #A52A2A;
-    /**/
-    color: BurlyWood;
-    color: #DEB887;
-    /**/
-    color: CadetBlue;
-    color: #5F9EA0;
-    /**/
-    color: Chartreuse;
-    color: #7FFF00;
-    /**/
-    color: Chocolate;
-    color: #D2691E;
-    /**/
-    color: Coral;
-    color: #FF7F50;
-    /**/
-    color: CornflowerBlue;
-    color: #6495ED;
-    /**/
-    color: Cornsilk;
-    color: #FFF8DC;
-    /**/
-    color: Crimson;
-    color: #DC143C;
-    /**/
-    color: Cyan;
-    color: #00FFFF;
-    /**/
-    color: DarkBlue;
-    color: #00008B;
-    /**/
-    color: DarkCyan;
-    color: #008B8B;
-    /**/
-    color: DarkGoldenRod;
-    color: #B8860B;
-    /**/
-    color: DarkGray;
-    color: #A9A9A9;
-    /**/
-    color: DarkGrey;
-    color: #A9A9A9;
-    /**/
-    color: DarkGreen;
-    color: #006400;
-    /**/
-    color: DarkKhaki;
-    color: #BDB76B;
-    /**/
-    color: DarkMagenta;
-    color: #8B008B;
-    /**/
-    color: DarkOliveGreen;
-    color: #556B2F;
-    /**/
-    color: DarkOrange;
-    color: #FF8C00;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-    color: ;
-    color: ;
-    /**/
-}
+  * {
+      box-sizing: border-box;
+  }
+  #rgbbgcolor, #hexbgcolor, #rgbbordercolor, #hexbordercolor, #rgbtextcolor, #hextextcolor {
+      width: 75%;
+      height: 130px;
+      border: 10px solid black;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      margin-bottom: 50px;
+  }
+  .contenedor {
+      margin-top: 50px;
+      margin-bottom: 100px;
+  }
+  .caja {
+      float: left;
+      width: 33%;
+  }
+  .caja>div {
+      padding: 50px;
+  }
+  /* .caja h1 {
+      text-align: center;
+      font-size: 2em;
+  }*/
+
+  .caja p {
+      background-color: white;
+      padding: 5px;
+      margin-bottom: 10PX;
+      text-align: center;
+      /*color: black;*/
+  }
+  .rgbbotone {
+      width: 100%;
+      clear: left;
+  }
+  span {
+      font-size: 1.1em;
+  }
+  .coloresfuncion {
+      margin: 20px;
+      padding: 50px 0px 50px 90px;
+      border: 5px solid black;
+      border-radius: 50px;
+  }
