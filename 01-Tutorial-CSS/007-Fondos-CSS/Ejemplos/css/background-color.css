@@ -1,0 +1,63 @@
+div {
+    width: 1200px;
+    height: 500px;
+    margin: 50px;
+    background-color: #bbff00;
+    , m
+}
+/*body {
+    color: red;
+}*/
+
+/*div {
+    width: 1200px;
+    height: 500px;
+    margin: 50px;
+    border: 5px solid currentColor;
+}*/
+
+/*div {
+    color: black;
+    width: 1200px;
+    height: 500px;
+    margin: 50px;
+    border: 5px solid currentColor;
+    box-shadow: 0 0 5px currentColor;
+    color: red;
+}*/
+
+.ejemplos {
+    /* Keyword values */
+    background-color: red;
+    background-color: indigo;
+    /* Hexadecimal value */
+    background-color: #bbff00;
+    /* Fully opaque */
+    background-color: #bf0;
+    /* Fully opaque shorthand */
+    background-color: #11ffee00;
+    /* Fully transparent */
+    background-color: #1fe0;
+    /* Fully transparent shorthand  */
+    background-color: #11ffeeff;
+    /* Fully opaque */
+    background-color: #1fef;
+    /* Fully opaque shorthand  */
+    /* RGB value */
+    background-color: rgb(255, 255, 128);
+    /* Fully opaque */
+    background-color: rgba(117, 190, 218, 0.5);
+    /* 50% transparent */
+    /* HSL value */
+    background-color: hsl(50, 33%, 25%);
+    /* Fully opaque */
+    background-color: hsla(50, 33%, 25%, 0.75);
+    /* 75% transparent */
+    /* Special keyword values */
+    background-color: currentcolor;
+    background-color: transparent;
+    /* Global values */
+    background-color: inherit;
+    background-color: initial;
+    background-color: unset;
+}
