@@ -1,14 +1,27 @@
-div {
-    width: 1200px;
-    height: 500px;
-    margin: 50px;
+.cuadro {
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    /*padding: 5%;*/
     background-color: #bbff00;
-    , m
+    opacity: 1;
 }
-/*body {
-    color: red;
-}*/
-
+div {
+    padding-top: 20px;
+    text-align: center
+}
+p {
+    /*width: 50%;*/
+}
+body {
+    width: 99%;
+    background-color: red;
+}
+[type=range] {
+    width: 50%;
+    margin: auto;
+    transform: rotate(180deg);
+}
 /*div {
     width: 1200px;
     height: 500px;
