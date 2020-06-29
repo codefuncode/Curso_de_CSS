@@ -1,0 +1,42 @@
+008-Bordes-CSS.txt
+
+como cada una de las propiedades de la taquigrafía:
+
+ancho de borde: como cada una de las propiedades de la taquigrafía:
+    ancho del borde superior: medio
+    ancho de borde derecho: medio
+    ancho del borde inferior: medio
+    ancho del borde izquierdo: medio
+estilo de borde: como cada una de las propiedades de la taquigrafía:
+    estilo de borde superior: ninguno
+    estilo de borde derecho: ninguno
+    estilo borde inferior: ninguno
+    estilo borde izquierdo: ninguno
+color de borde: como cada una de las propiedades de la taquigrafía:
+    border-top-color: currentcolor
+    color del borde derecho: color actual
+    color del borde inferior: color actual
+    color del borde izquierdo: color actual
+
+
+===============================================================
+
+    as each of the properties of the shorthand:
+
+border-width: as each of the properties of the shorthand:
+    border-top-width: medium
+    border-right-width: medium
+    border-bottom-width: medium
+    border-left-width: medium
+
+border-style: as each of the properties of the shorthand:
+    border-top-style: none
+    border-right-style: none
+    border-bottom-style: none
+    border-left-style: none
+    
+border-color: as each of the properties of the shorthand:
+    border-top-color: currentcolor
+    border-right-color: currentcolor
+    border-bottom-color: currentcolor
+    border-left-color: currentcolor
