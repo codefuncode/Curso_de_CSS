@@ -40,3 +40,93 @@ border-color: as each of the properties of the shorthand:
     border-right-color: currentcolor
     border-bottom-color: currentcolor
     border-left-color: currentcolor
+
+    p.mix {border-style: dotted dashed solid double;}
+
+    Todas las propiedades de borde CSS
+Descripción de propiedad
+-----------------------------------------------------------------------
+border 
+Establece todas las propiedades de borde en una declaración
+-----------------------------------------------------------------------
+border-bottom 
+Establece todas las propiedades del borde inferior en una declaración
+-----------------------------------------------------------------------
+border-bottom-color 
+Establece el color del borde inferior
+-----------------------------------------------------------------------
+border-bottom-style 
+Establece el estilo del borde inferior
+-----------------------------------------------------------------------
+border-bottom-width 
+Establece el ancho del borde inferior
+-----------------------------------------------------------------------
+color de borde 
+Establece el color de los cuatro bordes
+-----------------------------------------------------------------------
+border-left 
+Establece todas las propiedades del borde izquierdo en una declaración
+-----------------------------------------------------------------------
+border-left-color 
+Establece el color del borde izquierdo
+-----------------------------------------------------------------------
+border-left-style 
+Establece el estilo del borde izquierdo
+-----------------------------------------------------------------------
+border-left-width 
+Establece el ancho del borde izquierdo
+-----------------------------------------------------------------------
+border-radius 
+Establece las cuatro propiedades de borde - * - radio para esquinas redondeadas
+-----------------------------------------------------------------------
+border-right 
+Establece todas las propiedades de borde derecho en una declaración
+-----------------------------------------------------------------------
+border-right-color 
+Establece el color del borde derecho
+-----------------------------------------------------------------------
+border-right-style 
+Establece el estilo del borde derecho
+-----------------------------------------------------------------------
+border-right-width 
+Establece el ancho del borde derecho
+-----------------------------------------------------------------------
+estilo de borde 
+Establece el estilo de los cuatro bordes
+-----------------------------------------------------------------------
+border-top 
+Establece todas las propiedades del borde superior en una declaración
+-----------------------------------------------------------------------
+border-top-color 
+Establece el color del borde superior
+-----------------------------------------------------------------------
+border-top-style 
+Establece el estilo del borde superior
+-----------------------------------------------------------------------
+border-top-width 
+Establece el ancho del borde superior
+-----------------------------------------------------------------------
+ancho de borde 
+Establece el ancho de los cuatro bordes
+
+
+p {
+  outline: 1px dashed red;
+  outline-offset: 10px;
+  background: yellow;
+  border: 1px solid blue;
+  margin: 15px;
+}
+
+
+    dotted - Defines a dotted border
+    dashed - Defines a dashed border
+    solid - Defines a solid border
+    double - Defines a double border
+    groove - Defines a 3D grooved border. The effect depends on the border-color value
+    ridge - Defines a 3D ridged border. The effect depends on the border-color value
+    inset - Defines a 3D inset border. The effect depends on the border-color value
+    outset - Defines a 3D outset border. The effect depends on the border-color value
+    none - Defines no border
+    hidden - Defines a hidden border
+

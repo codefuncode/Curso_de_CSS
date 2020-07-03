@@ -1,0 +1,12 @@
+div {
+    width: 50%;
+    height: 50px;
+    outline: 5px dashed red;
+    outline-offset: 50px;
+    background: yellow;
+    border: 5px dashed blue;
+    margin: 15px;
+}
+body {
+    margin: 100px 0px 0px 150px;
+}

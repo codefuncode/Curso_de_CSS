@@ -131,6 +131,7 @@ function fondotemp(argument) {
     if (fondofijado) {
 
     } else {
+
         var urlfondo = this.getAttribute('src');
         fondo.style.backgroundImage = "url('" + urlfondo + "')";
         fondo.style.backgroundSize = "100% 100%";
@@ -154,14 +155,17 @@ function resetfondo(argument) {
 function aplicafondotemp(argument) {
 
     if (this.value == '1') {
+
         urlfondo = foto_paisaje[0].getAttribute('src');
 
     } else if (this.value == '2') {
 
         urlfondo = foto_paisaje[1].getAttribute('src');
+
     } else if (this.value == '3') {
 
         urlfondo = foto_paisaje[2].getAttribute('src');
+
     } else if (this.value == '4') {
 
         urlfondo = foto_paisaje[3].getAttribute('src');

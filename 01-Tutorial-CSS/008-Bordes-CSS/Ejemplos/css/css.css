@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #D3E788;
+}
+.contenedor {
+    width: 100%;
+}
+.contenedor div {
+    margin: 5px;
+    box-shadow: 0px 0px 0px 1px black inset;
+}
+.controles {
+    width: 32.33%;
+    height: 550px;
+    float: left;
+    background-color: #9BD770;
+}
+.display {
+    padding: 10%;
+    width: 65.66%;
+    /*width: 98%;*/
+    height: 550px;
+    float: right;
+    background-color: #EBF7E3;
+}
+.controles .barr {
+    /*border-radius: 50px;*/
+    margin-top: 15px;
+    box-shadow: none !important;
+    width: 97%;
+    height: 60px;
+    /*background-color: #66B032;*/
+}
+.dropbtn {
+    width: 170px;
+    background-color: #EBF7E3;
+    color: black;
+    padding: 16px;
+    font-size: 19px;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #D3E788;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    box-shadow: none !important;
+    display: none;
+    position: absolute;
+    min-width: 300px;
+    overflow: auto;
+}
+.dropdown-content span {
+    cursor: pointer;
+    border-radius: 50px;
+    margin-bottom: 0px;
+    width: 70%;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #D3E788;
+}
+.dropdown span:hover {
+    background-color: #ddd;
+}
+.show {
+    display: block;
+}
+.elementoscontrol {
+    width: 90%;
+    height: 450px;
+    box-shadow: none !important;
+    /*border: 2px solid black;*/
+}
+button {
+    /*text-align: right;*/
+}
+button img {
+    margin-top: -10px;
+    width: 40px;
+    height: 35px;
+    float: left;
+}
+.elementoscontrol div {
+    box-shadow: none !important;
+}
+.elementoscontrol>div {
+    height: 475px;
+    width: 400px;
+    margin: 40px 10px 0px 10px;
+    padding: 40px 20px;
+    background-color: #EBF7E3;
+}
+.btnrange {
+    padding-top: 30px;
+}
+[name="choice"] {
+    width: 350px;
+    background-color: #EBF7E3;
+    color: black;
+    padding: 5px;
+    font-size: 12px;
+    border: 1px solid #D3E788;
+    cursor: pointer;
+}
+[type="range"], [type="number"] {
+    margin-top: 20px;
+    width: 350px;
+}
