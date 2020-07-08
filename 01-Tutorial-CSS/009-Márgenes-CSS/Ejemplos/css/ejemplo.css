@@ -1,0 +1,84 @@
+.ejemplo {
+    /* Apply to all four sides */
+    margin: 1em;
+    margin: -3px;
+    /* vertical | horizontal */
+    margin: 5% auto;
+    /* top | horizontal | bottom */
+    margin: 1em auto 2em;
+    /* top | right | bottom | left */
+    margin: 2px 1em 0 auto;
+    /* Global values */
+    margin: inherit;
+    margin: initial;
+    margin: unset;
+    /* <length> values */
+    margin-bottom: 10px;
+    /* An absolute length */
+    margin-bottom: 1em;
+    /* relative to the text size */
+    margin-bottom: 5%;
+    /* relative to the nearest block container's width */
+    /* Keyword values */
+    margin-bottom: auto;
+    /* Global values */
+    margin-bottom: inherit;
+    margin-bottom: initial;
+    margin-bottom: unset;
+    /* <length> values */
+    margin-left: 10px;
+    /* An absolute length */
+    margin-left: 1em;
+    /* relative to the text size */
+    margin-left: 5%;
+    /* relative to the nearest block container's width */
+    /* Keyword values */
+    margin-left: auto;
+    /* Global values */
+    margin-left: inherit;
+    margin-left: initial;
+    margin-left: unset;
+    /* <length> values */
+    margin-right: 20px;
+    /* An absolute length */
+    margin-right: 1em;
+    /* relative to the text size */
+    margin-right: 5%;
+    /* relative to the nearest block container's width */
+    /* Keyword values */
+    margin-right: auto;
+    /* Global values */
+    margin-right: inherit;
+    margin-right: initial;
+    margin-right: unset;
+    /* <length> values */
+    margin-top: 10px;
+    /* An absolute length */
+    margin-top: 1em;
+    /* relative to the text size */
+    margin-top: 5%;
+    /* relative to the nearest block container's width */
+    /* Keyword values */
+    margin-top: auto;
+    /* Global values */
+    margin-top: inherit;
+    margin-top: initial;
+    margin-top: unset;
+}
+* {
+    box-sizing: border-box;
+}
+.contenedor {
+    width: 500px;
+    height: 100px;
+    border: 5px solid black;
+}
+.megen {
+    width: 500px;
+    height: 50px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: -50;
+    border: 1px solid black;
+}

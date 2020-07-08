@@ -16,30 +16,29 @@ ejemplo.style.boxShadow = "none";
 ejemplo.style.width = "100%";
 ejemplo.style.height = "90%";
 
-for (var i = 0; i < opcion.length; i++) {
+// for (var i = 0; i < opcion.length; i++) {
 
-    if (i == 1 || i == 3) {
+//     if (i == 1 || i == 3) {
 
-        opcion[i].style.margin = "0px 0px 10px 30px";
+//         opcion[i].style.margin = "0px 0px 10px 30px";
 
-    } else {
+//     } else {
 
-        opcion[i].style.margin = "0px 0px 10px 0px";
-    }
+//         opcion[i].style.margin = "0px 0px 10px 0px";
+//     }
 
-    if (i == 0) {
+//     if (i == 0) {
 
-        opcion[i].addEventListener('click', muestraelemento);
+//         opcion[i].addEventListener('click', muestraelemento);
 
-    } else if (i == 1) {
-        // opcion[i].addEventListener("change", myScript);
+//     } else if (i == 1) {
 
-    } else if (i == 2) {
+//     } else if (i == 2) {
 
-    }
+//     }
 
-}
-var contador = 0;
+// }
+// var contador = 0;
 
 seleccion.addEventListener("change", function(argument) {
 
@@ -61,7 +60,19 @@ seleccion.addEventListener("change", function(argument) {
 
 });
 inputrange.addEventListener("input", function(argument) {
+
     numericinput.value = this.value;
+    ancho = this.value;
+    ejemplo.style.borderStyle = tipoborde;
+    ejemplo.style.borderWidth = "" + ancho + "px";
+    ejemplo.style.borderColor = "black";
+    usodeinput = true;
+    console.log(this.value);
+});
+
+numericinput.addEventListener("input", function(argument) {
+
+    inputrange.value = this.value;
     ancho = this.value;
     ejemplo.style.borderStyle = tipoborde;
     ejemplo.style.borderWidth = "" + ancho + "px";
