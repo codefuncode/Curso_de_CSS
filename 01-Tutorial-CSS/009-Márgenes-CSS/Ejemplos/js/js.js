@@ -1,4 +1,4 @@
-class Divicion {
+class Division {
 
     constructor(elemento) {
 
@@ -33,9 +33,9 @@ for (var i = 0; i < btnradio.length; i++) {
     console.log(btnradio[i]);
 }
 
-div1 = new Divicion(caja[0]);
-div2 = new Divicion(caja[1]);
-div3 = new Divicion(caja[2]);
+div1 = new Division(caja[0]);
+div2 = new Division(caja[1]);
+div3 = new Division(caja[2]);
 
 div1.margenes(div1, 0, 0, 0, 0);
 div2.margenes(div2, 0, 0, 0, 0);
