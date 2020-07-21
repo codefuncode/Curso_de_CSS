@@ -1,0 +1,22 @@
+div {
+    max-height: 200px;
+    min-height: 100px;
+    /**/
+    max-width: 500px;
+    min-width: 100px;
+    border: 2px solid blue;
+    overflow: auto;
+}
+/* Keyword values */
+
+/*overflow: visible;
+overflow: hidden;
+overflow: scroll;
+overflow: auto;
+overflow: hidden visible;*/
+
+/* Global values */
+
+/*overflow: inherit;
+overflow: initial;
+overflow: unset;*/
