@@ -24,6 +24,13 @@ var pb = 0;
 var pl = 0;
 
 // Se puede usar una matriz en vez de variabkles 
+var rt = 0;
+var rr = 0;
+var rb = 0;
+var rl = 0;
+var allr = 0;
+
+// Se puede usar una matriz en vez de variabkles 
 var bt = 0;
 var br = 0;
 var bb = 0;
@@ -356,6 +363,20 @@ function definecontroles() {
         controlactivo[4].value = allm;
 
     } else if (accion == "Relleno") {
+        controlactivo[0].setAttribute("max", "100");
+        controlactivo[0].value = rt;
+
+        controlactivo[1].setAttribute("max", "100");
+        controlactivo[1].value = rr;
+
+        controlactivo[2].setAttribute("max", "100");
+        controlactivo[2].value = rb;
+
+        controlactivo[3].setAttribute("max", "100");
+        controlactivo[3].value = rl;
+
+        controlactivo[4].setAttribute("max", "100");
+        controlactivo[4].value = allr;
 
     } else if (accion == "Borde") {
 
@@ -579,6 +600,7 @@ function aplicaFuncionalidad() {
             pr = this.value;
             pb = this.value;
             pl = this.value;
+            allr = this.value;
 
             let cadena =
                 pt + "px " +

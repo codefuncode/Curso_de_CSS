@@ -4,13 +4,16 @@
      //  botones 
      // ----------------------------------------------------------------
      // Boton  RGB
-     var rgbbtn = document.querySelectorAll('.rgbboton [type=range]');
+     var rgbbtn =
+         document.querySelectorAll('.rgbboton [type=range]');
      // ----------------------------------------------------------------
      // Boton hexadecimal
-     var hexboton = document.querySelectorAll('.hexboton [type=range]');
+     var hexboton =
+         document.querySelectorAll('.hexboton [type=range]');
      // ----------------------------------------------------------------
      // Boton GRBA
-     var rgbaboton = document.querySelectorAll('.rgbaboton [type=range]');
+     var rgbaboton =
+         document.querySelectorAll('.rgbaboton [type=range]');
      // ----------------------------------------------------------------
      // var rgbbtn = document.querySelectorAll('.rgbbotone [type=range]');
      // ===================================================================
@@ -19,48 +22,67 @@
      //  cajas para mostrar colores 
      // =========================================================
      // Cajas para el RGB
-     var rgbbgcolor = document.getElementById('rgbbgcolor');
-     var rgbbordercolor = document.getElementById('rgbbordercolor');
-     var rgbtextcolor = document.getElementById('rgbtextcolor');
+     var rgbbgcolor =
+         document.getElementById('rgbbgcolor');
+     var rgbbordercolor =
+         document.getElementById('rgbbordercolor');
+     var rgbtextcolor =
+         document.getElementById('rgbtextcolor');
      // =========================================================
      // ----------------------------------------------------------
      // ===========================================================
      // Cajas Para el Hexadecimal
-     var hexbgcolor = document.getElementById('hexbgcolor');
-     var hexbordercolor = document.getElementById('hexbordercolor');
-     var hextextcolor = document.getElementById('hextextcolor');
+     var hexbgcolor =
+         document.getElementById('hexbgcolor');
+     var hexbordercolor =
+         document.getElementById('hexbordercolor');
+     var hextextcolor =
+         document.getElementById('hextextcolor');
      // ===========================================================
      // --------------------------------------------------------
      // ========================================================
      // Cajas para el RGBA
-     var rgbabgcolor = document.getElementById('rgbabgcolor');
-     var rgbabordercolor = document.getElementById('rgbabordercolor');
-     var rgbatextcolor = document.getElementById('rgbatextcolor');
+     var rgbabgcolor =
+         document.getElementById('rgbabgcolor');
+     var rgbabordercolor =
+         document.getElementById('rgbabordercolor');
+     var rgbatextcolor =
+         document.getElementById('rgbatextcolor');
      // ========================================================
      // ===================================================================
 
      // ===================================================================
 
-     var resetear = document.getElementsByClassName('reset');
+     var resetear =
+         document.getElementsByClassName('reset');
 
      // ===================================================================
      //  textos para desplegar valores 
      //==================================================================
-     var rgbxtxtbg = document.querySelectorAll("#rgbbgcolor span");
-     var rgbxtxtborder = document.querySelectorAll("#rgbbordercolor span");
-     var rgbxtxtxt = document.querySelectorAll("#rgbtextcolor span");
+     var rgbxtxtbg =
+         document.querySelectorAll("#rgbbgcolor span");
+     var rgbxtxtborder =
+         document.querySelectorAll("#rgbbordercolor span");
+     var rgbxtxtxt =
+         document.querySelectorAll("#rgbtextcolor span");
      //==================================================================
      // -----------------------------------------------------------------
      // ================================================================
-     var hextextbgcolor = document.querySelectorAll("#hexbgcolor span");
-     var hextextbordercolor = document.querySelectorAll("#hexbordercolor span");
-     var hextexttextcolor = document.querySelectorAll("#hextextcolor span");
+     var hextextbgcolor =
+         document.querySelectorAll("#hexbgcolor span");
+     var hextextbordercolor =
+         document.querySelectorAll("#hexbordercolor span");
+     var hextexttextcolor =
+         document.querySelectorAll("#hextextcolor span");
      // ===================================================================
      // -------------------------------------------------------------------
      // ==================================================================
-     var rgbabgcolortext = document.querySelectorAll("#rgbabgcolor span");
-     var rgbabordercolortext = document.querySelectorAll("#rgbabordercolor span");
-     var rgbatextcolortext = document.querySelectorAll("#rgbatextcolor span");
+     var rgbabgcolortext =
+         document.querySelectorAll("#rgbabgcolor span");
+     var rgbabordercolortext =
+         document.querySelectorAll("#rgbabordercolor span");
+     var rgbatextcolortext =
+         document.querySelectorAll("#rgbatextcolor span");
      // ==================================================================
      // ===============================================================
      //  Estado inicial de todos los elementos 
@@ -71,24 +93,43 @@
          rgbbtn[i].value = '0';
 
      }
-     rgbbgcolor.style.backgroundColor = 'rgb(0,0,0)';
-     rgbbordercolor.style.border = "10px solid rgb(0,0,0)";
-     rgbtextcolor.style.color = "rgb(0,0,0)";
+     // Valores iniciales delas cajas 
+     rgbbgcolor.style.backgroundColor =
+         'rgb(0,0,0)';
+     rgbbordercolor.style.border =
+         "10px solid rgb(0,0,0)";
+     rgbtextcolor.style.color =
+         "rgb(0,0,0)";
 
+     //  Textos iniciales de las  cajas 
      for (var i = 0; i < 3; i++) {
 
          if (i == 0) {
-             rgbxtxtbg[i].innerHTML = 'Colores';
-             rgbxtxtborder[i].innerHTML = "Colores";
-             rgbxtxtxt[i].innerHTML = 'Colores';
+
+             rgbxtxtbg[i].innerHTML =
+                 'Colores';
+             rgbxtxtborder[i].innerHTML =
+                 "Colores";
+             rgbxtxtxt[i].innerHTML =
+                 'Colores';
+
          } else if (i == 1) {
-             rgbxtxtbg[i].innerHTML = '';
-             rgbxtxtborder[i].innerHTML = "";
-             rgbxtxtxt[i].innerHTML = '';
+
+             rgbxtxtbg[i].innerHTML =
+                 '';
+             rgbxtxtborder[i].innerHTML =
+                 "";
+             rgbxtxtxt[i].innerHTML =
+                 '';
+
          } else if (i == 2) {
-             rgbxtxtbg[i].innerHTML = 'RGB';
-             rgbxtxtborder[i].innerHTML = "RGB";
-             rgbxtxtxt[i].innerHTML = 'RGB';
+
+             rgbxtxtbg[i].innerHTML =
+                 'RGB';
+             rgbxtxtborder[i].innerHTML =
+                 "RGB";
+             rgbxtxtxt[i].innerHTML =
+                 'RGB';
          }
 
      }
@@ -207,10 +248,13 @@
                  hextextbgcolor[i].innerHTML = 'Colores';
                  hextextbordercolor[i].innerHTML = "Colores";
                  hextexttextcolor[i].innerHTML = 'Colores';
+
              } else if (i == 1) {
+
                  hextextbgcolor[i].innerHTML = '';
                  hextextbordercolor[i].innerHTML = "";
                  hextexttextcolor[i].innerHTML = '';
+
              } else if (i == 2) {
                  hextextbgcolor[i].innerHTML = 'HEXA';
                  hextextbordercolor[i].innerHTML = "HEXA";
@@ -235,18 +279,25 @@
              rgbaboton[i].value = '0';
 
              if (i == 0) {
+
                  rgbabgcolortext[i].innerHTML = 'Colores';
                  rgbabordercolortext[i].innerHTML = "Colores";
                  rgbatextcolortext[i].innerHTML = 'Colores';
+
              } else if (i == 1) {
+
                  rgbabgcolortext[i].innerHTML = '';
                  rgbabordercolortext[i].innerHTML = "";
                  rgbatextcolortext[i].innerHTML = '';
+
              } else if (i == 2) {
+
                  rgbabgcolortext[i].innerHTML = 'RGBA';
                  rgbabordercolortext[i].innerHTML = "RGBA";
                  rgbatextcolortext[i].innerHTML = 'RGBA';
+
              } else if (i == 3) {
+
                  rgbabgcolortext[i].innerHTML = '';
                  rgbabordercolortext[i].innerHTML = "";
                  rgbatextcolortext[i].innerHTML = '';
@@ -255,17 +306,9 @@
          }
      }
 
-     // ==============================================
-     // ===========================================
-     // ============================================
-     // ============================================
-     // =======================================================
-
      // =========================================================
      //  Eventos para los botones 
-     // =========================================================
-     // ========================================================
-     // ========================================================
+
      for (var i = 0; i < 3; i++) {
 
          rgbbtn[i].oninput = function(argument) {
@@ -276,9 +319,14 @@
              var dos = rgbbtn[1].value;
              var tres = rgbbtn[2].value;
 
-             rgbbgcolor.style.backgroundColor = 'rgb(' + uno + ',' + dos + ',' + tres + ')';
-             rgbbordercolor.style.border = "10px solid" + ' rgb(' + uno + ',' + dos + ',' + tres + ')';
-             rgbtextcolor.style.color = 'rgb(' + uno + ',' + dos + ',' + tres + ')';
+             rgbbgcolor.style.backgroundColor =
+                 'rgb(' + uno + ',' + dos + ',' + tres + ')';
+
+             rgbbordercolor.style.border =
+                 "10px solid" + ' rgb(' + uno + ',' + dos + ',' + tres + ')';
+
+             rgbtextcolor.style.color =
+                 'rgb(' + uno + ',' + dos + ',' + tres + ')';
 
              for (var i = 0; i < 3; i++) {
 
@@ -296,13 +344,20 @@
 
                      rgbnumbercolor = tres;
                  }
-                 rgbxtxtbg[i].innerHTML = rgbnumbercolor;
-                 rgbxtxtborder[i].innerHTML = rgbnumbercolor;
-                 rgbxtxtxt[i].innerHTML = rgbnumbercolor;
+
+                 rgbxtxtbg[i].innerHTML =
+                     rgbnumbercolor;
+
+                 rgbxtxtborder[i].innerHTML =
+                     rgbnumbercolor;
+
+                 rgbxtxtxt[i].innerHTML =
+                     rgbnumbercolor;
 
              }
 
          }
+         // =============================================
          hexboton[i].oninput = function(argument) {
 
              var uno = toHex(hexboton[0].value);
@@ -342,9 +397,15 @@
 
                      rgbnumbercolor = tres;
                  }
-                 hextextbgcolor[i].innerHTML = rgbnumbercolor;
-                 hextextbordercolor[i].innerHTML = rgbnumbercolor;
-                 hextexttextcolor[i].innerHTML = rgbnumbercolor;
+
+                 hextextbgcolor[i].innerHTML =
+                     rgbnumbercolor;
+
+                 hextextbordercolor[i].innerHTML =
+                     rgbnumbercolor;
+
+                 hextexttextcolor[i].innerHTML =
+                     rgbnumbercolor;
 
              }
          }
@@ -357,15 +418,30 @@
 
          rgbaboton[i].oninput = function(argument) {
 
-             var uno = rgbaboton[0].value;
-             var dos = rgbaboton[1].value;
-             var tres = rgbaboton[2].value;
-             var cuatro = rgbaboton[3].value;
-             var cuatro = parseFloat((cuatro / 10) * .1);
-             var cuatro = Number.parseFloat(cuatro).toFixed(1);
+             var uno =
+                 rgbaboton[0].value;
 
-             console.log('=====================');
-             console.log("uno = " + uno);
+             var dos =
+                 rgbaboton[1].value;
+
+             var tres =
+                 rgbaboton[2].value;
+
+             var cuatro =
+                 rgbaboton[3].value;
+
+             var cuatro =
+                 parseFloat((cuatro / 10) * .1);
+
+             var cuatro =
+                 Number.parseFloat(cuatro).toFixed(1);
+
+             console.log(
+                 '====================='
+             );
+             console.log(
+                 "uno = " + uno
+             );
              console.log("dos = " + dos);
              console.log("tres = " + tres);
              console.log("cuatro = " + cuatro);
@@ -407,6 +483,7 @@
              rgbabgcolor.style.backgroundColor = color;
              rgbabordercolor.style.border = '10px solid' + ' ' + color;
              rgbatextcolor.style.color = color;
+
              //  rgbabgcolor.setAttribute("style", "color:red; border: 1px solid blue;");
              // rgbabordercolor.setAttribute("style", "color:red; border: 1px solid blue;");
              // rgbatextcolor.setAttribute("style", "color:red; border: 1px solid blue;");
@@ -421,10 +498,6 @@
          }
      }
 
-     // =========================================================
-     // ========================================================
-     // ========================================================
-     // =========================================================
      // Funcion  para comvertir numeros a decimales 
      // =========================================================
      // =========================================================
