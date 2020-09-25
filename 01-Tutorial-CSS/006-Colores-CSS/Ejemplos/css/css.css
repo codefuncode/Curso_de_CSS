@@ -25,6 +25,10 @@
       margin-top: 50px;
       margin-bottom: 100px;
   }
+  h1 {
+      font-size: 100px;
+      color: green;
+  }
   .caja {
       float: left;
       width: 33%;
