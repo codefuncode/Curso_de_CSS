@@ -37,11 +37,11 @@ select {
 }
 #texto {
     white-space: pre-wrap;
-    color: white !important;
-    /*margin: 20px 0px;*/
+    /*color: red !important;*/
+    margin: 20px 0px;
 }
 .elemento p {
-    color: white !important;
+    /*color: white;*/
     margin: 20px 0px;
     font-size: 20px;
 }

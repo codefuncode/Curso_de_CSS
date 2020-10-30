@@ -3,6 +3,7 @@ https://www.tutorialspoint.com/css/css3_tutorial.htm
 https://www.w3schools.com/css/default.asp
 https://devdocs.io/css/
 
+sudo /opt/lampp/lampp start
 
 =====================================================================
 Nota 

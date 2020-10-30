@@ -337,6 +337,7 @@ aplicadireccion(argument) {
 
 function
 aplicaColor(argument) {
+    console.log(this.value);
 
     for (var i = 0; i < color.length; i++) {
 
