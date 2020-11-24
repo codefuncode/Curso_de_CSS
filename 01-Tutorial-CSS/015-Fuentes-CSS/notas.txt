@@ -1,1 +1,549 @@
-notas.txt
+notas.txtAll CSS Font Properties
+
+Property 			Description
+
+-----------------------------------------------------------------------
+font 				Establece todas las propiedades de la fuente en una declaración.
+Para acortar el código, también es posible especificar todas las propiedades de fuente individuales en una propiedad.
+
+La propiedad de fuente es una propiedad abreviada para:
+
+
+    font-style
+    font-variant
+    font-weight
+    font-size/line-height
+    font-family
+ font: italic small-caps bold 12px/30px Georgia, serif;
+-----------------------------------------------------------------------
+font-family 		Especifica la familia de fuentes para el texto.
+font-size 			Especifica el tamaño de fuente del texto.
+font-style 		 	Especifica el estilo de fuente del texto..
+font-variant 		Especifica si un texto debe mostrarse en letra pequeña
+font-weight 		Especifica el peso de una fuente.
+
+=========================================================================
+
+
+
+
+
+================================================================
+
+Combinaciones de fuentes más utilizadas
+
+La propiedad de la familia de fuentes debe contener varios nombres de fuentes como un sistema 'alternativo', para garantizar la máxima compatibilidad entre navegadores / sistemas operativos. Si el navegador no admite la primera fuente, intenta con la siguiente.
+
+Comience con la fuente que desee y termine con una familia genérica, para permitir que el navegador elija una fuente similar en la familia genérica, si no hay otras fuentes disponibles:
+
+=================================================================================================================================
+=================================================================================================================================
+------------
+@font-face
+------------
+------------------------------
+Tipos de fuentes recomendados 
+https://www.w3.org/TR/WOFF2/
+https://www.w3.org/TR/WOFF/
+https://en.wikipedia.org/wiki/Web_Open_Font_Format
+
+El primer borrador de WOFF 1 fue publicado en 2009 por Jonathan Kew, Tal Leming y Erik van Blokland, [3] con un código de conversión de referencia escrito por Jonathan Kew. [4] Tras la presentación de WOFF al World Wide Web Consortium (W3C) por la Fundación Mozilla, Opera Software y Microsoft en abril de 2010, [5] [6] el W3C comentó que esperaba que WOFF pronto se convirtiera en la fuente 'única e interoperable ] formato 'compatible con todos los navegadores. [7] El W3C publicó WOFF como borrador de trabajo en julio de 2010. [8] [9] El borrador final se publicó como Recomendación del W3C el 13 de diciembre de 2012. [10]
+WOFF 2.0, con código de referencia proporcionado por Google, [11] tiene un esquema de compresión mejorado, utilizando Brotli para compresión a nivel de bytes, y se convirtió en una Recomendación del W3C en marzo de 2018. [1
+------------------------------
+
+
+.className { 
+		@font-face { 
+				font-family: MyHelvetica; 
+        -----------------------------------   
+				src: local("Helvetica Neue Bold"),
+					   local("HelveticaNeue-Bold"),
+					   url(MgOpenModernaBold.ttf);
+        -----------------------------------    
+				font-weight: bold; 
+		} 
+}
+font-display
+    Determina cómo se muestra una fuente en función de si está descargada y lista para usar y cuándo.
+
+font-family
+    Especifica un nombre que se utilizará como valor nominal de la fuente para las propiedades de la fuente.
+
+font-stretch
+    Un valor de extensión de fuente. Desde Firefox 61 (y en otros navegadores modernos), esto también acepta dos valores para especificar un rango que es compatible con un tipo de letra, por ejemplo, font-stretch: 50% 200%;
+
+font-style
+    Un valor de estilo de fuente. Desde Firefox 61 (y en otros navegadores modernos), esto también acepta dos valores para especificar un rango que es compatible con un tipo de letra, por ejemplo, estilo de letra: oblicuo 20deg 50deg;
+
+font-weight
+    Un valor de peso de fuente. Desde Firefox 61 (y en otros navegadores modernos), esto también acepta dos valores para especificar un rango que es compatible con un tipo de letra, por ejemplo, font-weight: 100 400;
+
+font-variant
+    Un valor de variante de fuente.
+
+font-feature-settings
+    Permite el control de las funciones tipográficas avanzadas en fuentes OpenType.
+
+font-variation-settings
+    Permite un control de bajo nivel sobre las variaciones de fuente OpenType o TrueType, especificando los nombres de eje de cuatro letras de las características para variar, junto con sus valores de variación.
+    
+src
+
+    Especifica el recurso que contiene los datos de la fuente. Puede ser una URL a una ubicación de archivo de fuente remota o el nombre de una fuente en la computadora del usuario.
+
+    Para proporcionar al navegador una pista sobre el formato de un recurso de fuente, para que pueda seleccionar uno adecuado, es posible incluir un tipo de formato dentro de una función format ():
+
+
+=================================================================================================================================
+=================================================================================================================================
+@font-face.font-family
+================================================================
+@font-face.font-style
+================================================================
+----------------------------------
+@font-face.font-variation-settings
+----------------------------------
+    @font-face {
+        font-family: 'OpenTypeFont';
+        src: url('open_type_font.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        font-variation-settings: 'wght' 400, 'wdth' 300; 
+    }
+=================================================================
+@font-face.src
+
+=================================================================
+-------------------------
+@font-face.unicode-range
+-------------------------
+https://en.wikipedia.org/wiki/Universal_Character_Set_characters
+https://www.unicodepedia.com/
+
+El propósito de este descriptor es permitir que los recursos de fuentes se segmenten de modo que un navegador solo necesite descargar el recurso de fuentes necesario para el contenido de texto de una página en particular. Por ejemplo, un sitio con muchas localizaciones podría proporcionar recursos de fuentes independientes para inglés, griego y japonés. Para los usuarios que ven la versión en inglés de una página, no es necesario descargar los recursos de fuentes para las fuentes griegas y japonesas, lo que ahorra ancho de banda.
+
+/* <unicode-range> values */
+unicode-range: U+26;               /* single codepoint */
+unicode-range: U+0-7F;
+unicode-range: U+0025-00FF;        /* codepoint range */
+unicode-range: U+4??;              /* wildcard range */
+unicode-range: U+0025-00FF, U+4??; /* multiple values */
+
+
+--------------------------------------------------
+<div>Me & You = Us</div>
+
+@font-face {
+  font-family: 'Ampersand';
+  src: local('Times New Roman');
+  unicode-range: U+26;
+}
+
+div {
+  font-size: 4em;
+  font-family: Ampersand, Helvetica, sans-serif;  
+}
+--------------------------------------------------
+
+=================================================================
+@font-feature-values
+https://www.w3docs.com/learn-css/font-feature-values.html
+https://duckduckgo.com/?t=canonical&q=%40font-feature-values+Rule&ia=web
+https://css-tricks.com/almanac/properties/f/font-feature-settings/
+https://www.w3cschool.cn/doc_css/css-@font-feature-values.html?lang=en
+
+
+
+=================================================================
+CSS Fonts
+font
+font-family
+font-feature-settings
+------------------------------------------------------------------
+------------
+font-kerning
+------------
+https://devdocs.io/css/font-kerning
+https://en.wikipedia.org/wiki/Kerning
+Kerning define cómo se espacian las letras. En fuentes bien kerned, esta característica hace que el espaciado entre caracteres sea más uniforme y agradable de leer de lo que sería de otra manera. En la imagen de abajo, por ejemplo, los ejemplos de la izquierda no usan kerning, mientras que los de la derecha sí lo hacen:
+------------------------------------------------------------------
+------------------------------------------------------------------
+----------------------
+font-language-override
+----------------------
+La propiedad CSS font-language-override controla el uso de glifos específicos del idioma en un tipo de letra.
+------------------------------------------------------------------
+-------------------
+font-optical-sizing
+-------------------
+
+El CSS de tamaño óptico de fuente establece si la representación del texto está optimizada para su visualización en diferentes tamaños. Esto solo funciona para fuentes que tienen un eje de variación de tamaño óptico.
+
+Por ejemplo, los tamaños de texto pequeños a menudo se renderizan con trazos más gruesos y serifas más grandes, mientras que el texto más grande a menudo se renderiza de manera más delicada con más contraste entre trazos más gruesos y más finos.
+
+Nota: El eje de variación de tamaño óptico está representado por opsz en la font-variation-settings..
+------------------------------------------------------------------
+---------
+font-size
+---------
+/* <absolute-size> values */
+font-size: xx-small;
+font-size: x-small;
+font-size: small;
+font-size: medium;
+font-size: large;
+font-size: x-large;
+font-size: xx-large;
+
+/* <relative-size> values */
+font-size: smaller;
+font-size: larger;
+
+/* <length> values */
+font-size: 12px;
+font-size: 0.8em;
+
+/* <percentage> values */
+font-size: 80%;
+
+/* Global values */
+font-size: inherit;
+font-size: initial;
+font-size: unset;
+
+-----------------------------------------------------------------
+----------------
+font-size-adjust
+----------------
+La propiedad es útil ya que la legibilidad de las fuentes, especialmente en tamaños pequeños, está determinada más por el tamaño de las letras minúsculas que por el tamaño de las letras mayúsculas. La legibilidad puede convertirse en un problema cuando la familia de fuentes de primera elección no está disponible y su reemplazo tiene una relación de aspecto significativamente diferente (la relación entre el tamaño de las letras minúsculas y el tamaño de la fuente).
+
+Para utilizar esta propiedad de una manera que sea compatible con los navegadores que no admiten el ajuste de tamaño de fuente, se especifica como un número por el que se multiplica la propiedad de tamaño de fuente. Esto significa que el valor especificado para la propiedad generalmente debe ser la relación de aspecto de la fuente de primera elección. Por ejemplo, una hoja de estilo que especifica:
+
+... realmente está especificando que las letras minúsculas de la fuente deben tener 7px de alto (0.5 × 14px).
+
+font-size: 14px;  
+font-size-adjust: 0.5;
+
+
+/* Utilice el tamaño de fuente especificado */
+font-size-adjust: none;
+
+/* Use un tamaño de fuente que haga minúsculas
+   letras la mitad del tamaño de fuente especificado*/
+font-size-adjust: 0.5;
+
+-----------------------------------------------------------------
+-------------
+font-stretch
+-------------
+https://developer.mozilla.org/en-US/docs/Web/CSS/font-stretch
+Algunas familias de fuentes ofrecen caras adicionales en las que los caracteres son más estrechos que la cara normal (caras condensadas) o más anchos que la cara normal (caras expandidas).
+
+Puede utilizar font-stretch para seleccionar una cara condensada o expandida de dichas fuentes. Si la fuente que está utilizando no ofrece caras condensadas o expandidas, esta propiedad no tiene ningún efecto.
+
+Para ver el efecto de esta propiedad en algunas fuentes de muestra, consulte la sección Selección de tipo de fuente a continuación.
+-----------------------------------------------------------------
+-----------
+font-style
+-----------
+
+font-style: normal;
+font-style: italic;
+font-style: oblique;
+font-style: oblique 10deg;
+
+/* Global values */
+font-style: inherit;
+font-style: initial;
+font-style: unset;
+-----------------------------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------------
+---------------
+font-synthesis
+---------------
+La propiedad CSS de síntesis de fuentes controla qué tipos de letra faltantes, negrita o cursiva, pueden ser sintetizados por el navegador.
+none | [ weight || style ]
+em {
+  font-weight: bold;
+}
+.syn {
+  font-synthesis: style weight;
+}
+.no-syn {
+  font-synthesis: none;
+}
+
+<em class="syn">Synthesize me! 站直。</em>
+<br/>
+<em class="no-syn">Don't synthesize me! 站直。</em>
+------------------------------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------------
+-------------
+font-variant
+-------------
+Ver tabla de compatibilidad 
+https://devdocs.io/css/font-variant
+https://devdocs.io/css/font-variant-alternates
+ Parametros 
+
+normal
+    Especifica un tipo de fuente normal; cada una de las propiedades a mano alzada tiene un valor inicial de normal. Las propiedades a mano alzada de font-variant son: font-variant-caps, font-variant-numeric, font-variant-alternates, font-variant-ligatures y font-variant-east-asian.
+
+
+none
+    Establece el valor de font-variant-ligatures en none y los valores de la otra propiedad a mano alzada como normal, su valor inicial.
+
+<common-lig-values>, <discretionary-lig-values>, <historical-lig-values>, <contextual-alt-values> 
+    Especifica las palabras clave relacionadas con la propiedad a mano de font-variant-ligatures. Los valores posibles son: ligaduras comunes, ligaduras no comunes, ligaduras discrecionales, ligaduras no discrecionales, ligaduras históricas, ligaduras no históricas, contextual y no contextual.
+
+
+stylistic(), historical-forms, styleset(), character-variant(), swash(), ornaments(), annotation() 
+    Especifica las palabras clave y funciones relacionadas con la propiedad a mano alzada font-variant-alternates.
+
+
+small-caps, all-small-caps, petite-caps, all-petite-caps, unicase, titling-caps 
+    Especifica las palabras clave y funciones relacionadas con la propiedad a mano alzada font-variant-caps.
+
+
+<numeric-figure-values>, <numeric-spacing-values>, <numeric-fraction-values>, ordinal, slashed-zero 
+    Especifica las palabras clave relacionadas con la propiedad a mano alzada font-variant-numeric. Los valores posibles son: números de alineación, números de estilo antiguo, números proporcionales, números tabulares, fracciones diagonales, fracciones apiladas, ordinal y cero inclinado.
+
+
+<east-asian-variant-values>, <east-asian-width-values>, ruby 
+    Especifica las palabras clave relacionadas con la propiedad a mano alzada font-variant-east-asian. Los valores posibles son: jis78, jis83, jis90, jis04, simplificado, tradicional, ancho completo, ancho proporcional, rubí.
+------------------------------------------------------------------
+
+
+
+
+------------------------------------------------------------------
+-----------------------
+font-variant-alternates
+-----------------------
+https://devdocs.io/css/font-variant-alternates
+------------------------------------------------------------------
+
+
+
+
+------------------------------------------------------------------
+------------------
+font-variant-caps
+------------------
+
+
+
+/* Keyword values */
+font-variant-caps: normal;
+   Desactiva el uso de glifos alternativos.
+
+
+font-variant-caps: small-caps;
+
+
+font-variant-caps: all-small-caps;
+font-variant-caps: petite-caps;
+font-variant-caps: all-petite-caps;
+font-variant-caps: unicase;
+font-variant-caps: titling-caps;
+
+/* Global values */
+font-variant-caps: inherit;
+font-variant-caps: initial;
+font-variant-caps: unset;
+
+
+normal
+    Desactiva el uso de glifos alternativos.
+
+small-caps
+    Habilita la visualización de mayúsculas pequeñas (función OpenType: smcp). Los glifos de minúscula suelen utilizar la forma de letras mayúsculas, pero se reducen al tamaño de letras minúsculas.
+
+all-small-caps
+    Permite la visualización de mayúsculas pequeñas para letras mayúsculas y minúsculas (características OpenType: c2sc, smcp).
+
+petite-caps
+    Habilita la visualización de minúsculas (función OpenType: pcap).
+
+all-petite-caps
+    Habilita la visualización de minúsculas en mayúsculas y minúsculas (características OpenType: c2pc, pcap).
+
+unicase
+    Permite la visualización de una mezcla de mayúsculas pequeñas para letras mayúsculas con letras minúsculas normales (función OpenType: unic).
+
+titling-caps
+    Habilita la visualización de mayúsculas de títulos (función OpenType: titl). Los glifos de letras mayúsculas a menudo están diseñados para usarse con letras minúsculas. Cuando se utilizan en todas las secuencias de titulación en mayúsculas, pueden parecer demasiado fuertes. Las mayúsculas de titulación están diseñadas específicamente para esta situación.
+----------------------------------------------------------------
+
+
+
+
+
+----------------------------------------------------------------
+-----------------------
+font-variant-east-asian
+-----------------------
+
+https://devdocs.io/css/font-variant-east-asian
+----------------------------------------------------------------
+
+
+
+----------------------------------------------------------------
+-----------------------
+font-variant-ligatures
+-----------------------
+
+
+https://devdocs.io/css/font-variant-ligatures
+---------------------------------------------------------------
+
+
+
+----------------------------------------------------------------
+--------------------
+font-variant-numeric
+--------------------
+
+<p class="ordinal">1st, 2nd, 3rd, 4th, 5th</p>
+
+/*
+This example uses the Source Sans Pro OpenType font, developed by Adobe
+and used here under the terms of the SIL Open Font License, Version 1.1:
+http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web
+*/
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://mdn.mozillademos.org/files/15757/SourceSansPro-Regular.otf") format("opentype");
+}
+
+.ordinal {
+  font-variant-numeric: ordinal;
+  font-family: "Source Sans Pro";
+}
+-----------------------------------------------------------------
+
+
+
+-----------------------------------------------------------------
+---------------------
+font-variant-position
+---------------------
+
+
+https://devdocs.io/css/font-variant-position
+-----------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------
+-------------------------
+font-variation-settings
+-------------------------
+
+https://devdocs.io/css/font-variation-settings
+
+Axis Tag          CSS Property
+
+"wght"            font-weight
+"wdth"            font-stretch
+"slnt" (slant)    font-style: oblique + angle
+"ital"            font-style: italic
+"opsz"            font-optical-sizing
+
+
+
+
+-----------------------------------------------------------------
+
+
+font-weight
+=================================================================
+
+=================================================================
+ W3Scoool documentación 
+
+All CSS Font Properties
+
+Property      Description
+font          Sets all the font properties in one declaration
+font-family   Specifies the font family for text
+font-size     Specifies the font size of text
+font-style    Specifies the font style for text
+font-variant  Specifies whether or not a text should be displayed 
+              in a small-caps font
+
+font-weight   Specifies the weight of a font
+
+
+===================================================================
+
+    @font-face
+    @font-face.font-family
+    @font-face.font-style
+    @font-face.font-variation-settings
+    @font-face.src
+    @font-face.unicode-range
+    @font-feature-values
+    
+    CSS Fonts
+    font
+    font-family
+    font-feature-settings
+    font-kerning
+    font-language-override
+    font-optical-sizing
+    font-size
+    font-size-adjust
+    font-stretch
+    font-style
+    font-synthesis
+    font-variant
+    font-variant-alternates
+    font-variant-caps
+    font-variant-east-asian
+    font-variant-ligatures
+    font-variant-numeric
+    font-variant-position
+    font-variation-settings
+    font-weight
+
+
+MDN fererencia
+https://devdocs.io/css/css_fonts/opentype_fonts_guide
+
+
+font-display
+ 
+font-family
+
+font-stretch
+  
+font-style
+   
+font-weight
+ 
+font-variant
+   
+font-feature-settings
+   
+font-variation-settings
+ 
+src
+
