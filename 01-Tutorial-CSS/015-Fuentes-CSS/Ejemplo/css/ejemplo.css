@@ -1,0 +1,45 @@
+* {}
+@font-face {
+    font-family: Lettersketch;
+    src: url('../Lettersketch-ow1wV.ttf');
+}
+@font-face {
+    font-family: Helveticamazing;
+    src: url('../Helveticamazing.ttf');
+}
+@font-face {
+    font-family: Sketchzone;
+    src: url('../Sketchzone.otf');
+}
+@font-face {
+    font-family: Sunset;
+    src: url('../Sunset-Boulevard.otf');
+}
+div {
+    border: 1px solid black;
+    margin: 25px;
+    padding: 25px;
+}
+.uno p {
+    color: red;
+    font-family: Lettersketch;
+    font-style: oblique -50deg;
+}
+.dos p {
+    font-size: 50px;
+}
+.tres p {
+    font-weight: 900;
+}
+.cuatro p {
+    /*font-style: normal;*/
+    /*font-style: italic;*/
+    /*font-style: oblique;*/
+    font-style: oblique 50deg;
+}
+.cinco p {
+    /*color: red;*/
+}
+.seis p {
+    /*color: red;*/
+}

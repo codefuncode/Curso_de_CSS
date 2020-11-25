@@ -1,0 +1,381 @@
+
+----------------------------------------------------------------------
+@font-face
+
+		--------------------------------------------
+		font-display
+					font-display: auto;
+					font-display: block;
+					font-display: swap;
+					font-display: fallback;
+					font-display: optional;
+		--------------------------------------------
+
+		--------------------------------------------
+		font-family
+					/* <string> values */
+					font-family: "font family";
+					font-family: 'another font family';
+
+					/* <custom-ident> value */
+					font-family: examplefont;
+		--------------------------------------------
+		--------------------------------------------------------
+		font-stretch
+					https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-stretch
+					/* Single values */
+					font-stretch: ultra-condensed;
+					font-stretch: extra-condensed;
+					font-stretch: condensed;
+					font-stretch: semi-condensed;
+					font-stretch: normal;
+					font-stretch: semi-expanded;
+					font-stretch: expanded;
+					font-stretch: extra-expanded;
+					font-stretch: ultra-expanded;
+					font-stretch: 50%;
+					font-stretch: 100%;
+					font-stretch: 200%;
+
+					/* multiple values */
+					font-stretch: 75% 125%;
+					font-stretch: condensed ultra-condensed;
+		--------------------------------------------------------
+
+		-----------------------------------------
+		font-style
+					font-style: normal;
+					font-style: italic;
+					font-style: oblique;
+					font-style: oblique 10deg;
+
+					/* Global values */
+					font-style: inherit;
+					font-style: initial;
+					font-style: unset;
+		-----------------------------------------
+
+		-----------------------------------------
+		font-weight
+					/* Keyword values */
+					font-weight: normal;
+					font-weight: bold;
+
+					/* Keyword values relative to the parent */
+					font-weight: lighter;
+					font-weight: bolder;
+
+					/* Numeric keyword values */
+					font-weight: 1
+					font-weight: 100;
+					font-weight: 100.6;
+					font-weight: 123;
+					font-weight: 200;
+					font-weight: 300;
+					font-weight: 321;
+					font-weight: 400;
+					font-weight: 500;
+					font-weight: 600;
+					font-weight: 700;
+					font-weight: 800;
+					font-weight: 900;
+					font-weight: 1000;
+
+					/* Global values */
+					font-weight: inherit;
+					font-weight: initial;
+					font-weight: unset;
+		-----------------------------------------
+
+		----------------------------------------------------------------------------------------------------------------
+		font-variant:
+
+					font-variant-alternates
+					font-variant-caps
+					font-variant-east-asian
+					font-variant-ligatures
+					font-variant-numeric
+
+
+					/* ===================== Global values  =====================*/
+					font-variant: inherit;
+					font-variant: initial;
+					font-variant: unset;
+					/* ===================== Global values  =====================*/
+
+
+				
+					font-variant: "font-variant-ligatures:";
+
+									/* Keyword values */
+									font-variant-ligatures: normal;
+									font-variant-ligatures: none;
+									font-variant-ligatures: common-ligatures;           /* <common-lig-values> */
+									font-variant-ligatures: no-common-ligatures;        /* <common-lig-values> */
+									font-variant-ligatures: discretionary-ligatures;    /* <discretionary-lig-values> */
+									font-variant-ligatures: no-discretionary-ligatures; /* <discretionary-lig-values> */
+									font-variant-ligatures: historical-ligatures;       /* <historical-lig-values> */
+									font-variant-ligatures: no-historical-ligatures;    /* <historical-lig-values> */
+									font-variant-ligatures: contextual;                 /* <contextual-alt-values> */
+									font-variant-ligatures: no-contextual;              /* <contextual-alt-values> */
+									font-variant-ligatures: contextual;                 /* <no-historical-ligatures> <common-ligatures> */
+
+									/* Global values */
+									font-variant-ligatures: inherit;
+									font-variant-ligatures: initial;
+									font-variant-ligatures: unset;
+
+
+
+
+					font-variant: "font-variant-alternates:";
+
+									/* Keyword values */
+									font-variant-alternates: normal;
+									font-variant-alternates: historical-forms;
+
+									/* Functional notation values */
+									font-variant-alternates: stylistic(user-defined-ident);
+									font-variant-alternates: styleset(user-defined-ident);
+									font-variant-alternates: character-variant(user-defined-ident);
+									font-variant-alternates: swash(user-defined-ident);
+									font-variant-alternates: ornaments(user-defined-ident);
+									font-variant-alternates: annotation(user-defined-ident);
+									font-variant-alternates: swash(ident1) annotation(ident2);
+
+									/* Global values */
+									font-variant-alternates: initial;
+									font-variant-alternates: inherit;
+									font-variant-alternates: unset;
+
+
+
+					font-variant: "font-variant-caps:";
+
+									/* Keyword values */
+									font-variant-caps: normal;
+									font-variant-caps: small-caps;
+									font-variant-caps: all-small-caps;
+									font-variant-caps: petite-caps;
+									font-variant-caps: all-petite-caps;
+									font-variant-caps: unicase;
+									font-variant-caps: titling-caps;
+
+									/* Global values */
+									font-variant-caps: inherit;
+									font-variant-caps: initial;
+									font-variant-caps: unset;
+
+
+
+					font-variant: "font-variant-numeric:";
+
+									font-variant-numeric: normal;
+									font-variant-numeric: ordinal;
+									font-variant-numeric: slashed-zero;
+									font-variant-numeric: lining-nums;         /* <numeric-figure-values> */
+									font-variant-numeric: oldstyle-nums;       /* <numeric-figure-values> */
+									font-variant-numeric: proportional-nums;   /* <numeric-spacing-values> */
+									font-variant-numeric: tabular-nums;        /* <numeric-spacing-values> */
+									font-variant-numeric: diagonal-fractions;  /* <numeric-fraction-values> */
+									font-variant-numeric: stacked-fractions;   /* <numeric-fraction-values> */
+									font-variant-numeric: oldstyle-nums stacked-fractions;
+
+									/* Global values */
+									font-variant-numeric: inherit;
+									font-variant-numeric: initial;
+									font-variant-numeric: unset;
+
+
+
+					font-variant: "font-variant-numeric:";
+
+									font-variant-numeric: normal;
+									font-variant-numeric: ordinal;
+									font-variant-numeric: slashed-zero;
+									font-variant-numeric: lining-nums;         /* <numeric-figure-values> */
+									font-variant-numeric: oldstyle-nums;       /* <numeric-figure-values> */
+									font-variant-numeric: proportional-nums;   /* <numeric-spacing-values> */
+									font-variant-numeric: tabular-nums;        /* <numeric-spacing-values> */
+									font-variant-numeric: diagonal-fractions;  /* <numeric-fraction-values> */
+									font-variant-numeric: stacked-fractions;   /* <numeric-fraction-values> */
+									font-variant-numeric: oldstyle-nums stacked-fractions;
+
+									/* Global values */
+									font-variant-numeric: inherit;
+									font-variant-numeric: initial;
+									font-variant-numeric: unset;
+									
+
+					https://www.w3.org/TR/2018/REC-css-fonts-3-20180920/#propdef-font-variant-numeric
+
+
+
+					font-variant: "font-variant-east-asian";
+
+									font-variant-east-asian: normal;
+									font-variant-east-asian: ruby;
+									font-variant-east-asian: jis78;              /* <east-asian-variant-values> */
+									font-variant-east-asian: jis83;              /* <east-asian-variant-values> */
+									font-variant-east-asian: jis90;              /* <east-asian-variant-values> */
+									font-variant-east-asian: jis04;              /* <east-asian-variant-values> */
+									font-variant-east-asian: simplified;         /* <east-asian-variant-values> */
+									font-variant-east-asian: traditional;        /* <east-asian-variant-values> */
+									font-variant-east-asian: full-width;         /* <east-asian-width-values> */
+									font-variant-east-asian: proportional-width; /* <east-asian-width-values> */
+									font-variant-east-asian: ruby full-width jis83;
+
+									/* Global values */
+									font-variant-east-asian: inherit;
+									font-variant-east-asian: initial;
+									font-variant-east-asian: unset;
+
+					https://devdocs.io/css/font-variant-east-asian
+
+
+		----------------------------------------------------------------------------------------------------------------
+		font-feature-settings:
+
+
+					font-variant:"font-feature-settings:";
+
+
+									/* Use the default settings */
+									font-feature-settings: normal;
+
+									/* Set values for OpenType feature tags */
+									font-feature-settings: "smcp";
+									font-feature-settings: "smcp" on;
+									font-feature-settings: "swsh" 2;
+									font-feature-settings: "smcp", "swsh" 2;
+
+									/* Global values */
+									font-feature-settings: inherit;
+									font-feature-settings: initial;
+									font-feature-settings: unset;
+
+
+
+		https://en.wikipedia.org/wiki/List_of_typographic_features#OpenType_typographic_features
+
+
+		-------------------------------------------------------------------------------------------------------------------
+
+		font-variation-settings
+									/* Use the default settings */
+									font-variation-settings: normal;
+
+									/* Set values for OpenType axis names */
+									font-variation-settings: "xhgt" 0.7;
+
+									https://docs.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg#registered-axis-tags
+
+									https://docs.microsoft.com/en-us/typography/opentype/otspec184beta/mvar
+		
+
+		--------------------------------------------------------------------------------------------------------------------
+		src
+									/* <url> values */
+									src: url(https://somewebsite.com/path/to/font.woff); /* Absolute URL */
+									src: url(path/to/font.woff);                         /* Relative URL */
+									src: url(path/to/font.woff) format("woff");          /* Explicit format */
+									src: url('path/to/font.woff');                       /* Quoted URL */
+									src: url(path/to/svgfont.svg#example);               /* Fragment identifying font */
+
+									/* <font-face-name> values */
+									src: local(font);      /* Unquoted name */
+									src: local(some font); /* Name containing space */
+									src: local("font");    /* Quoted name */
+
+									/* Multiple items */
+									src: local(font), url(path/to/font.svg) format("svg"),
+									url(path/to/font.woff) format("woff"),
+									url(path/to/font.otf) format("opentype");
+
+
+		--------------------------------------------------------------------------------------------------------------------
+
+
+												/* <unicode-range> values */
+
+									unicode-range: U+26;               /* single codepoint */
+									unicode-range: U+0-7F;
+									unicode-range: U+0025-00FF;        /* codepoint range */
+									unicode-range: U+4??;              /* wildcard range */
+									unicode-range: U+0025-00FF, U+4??; /* multiple values */
+
+									https://unicode-table.com/en/#control-character
+
+									https://unicode-table.com/es/search/?q=U%2B26
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face.font-family
+@font-face.font-style
+@font-face.font-variation-settings
+@font-face.src
+@font-face.unicode-range
+@font-feature-values
+----------------------------------------------------------------------
+
+
+
+
+==========
+CSS Fonts
+==========
+----------------------------------------------------------------------
+font
+font-family
+font-feature-settings
+font-kerning
+font-language-override
+font-optical-sizing
+font-size
+font-size-adjust
+font-stretch
+font-style
+font-synthesis
+font-variant
+font-variant-alternates
+font-variant-caps
+font-variant-east-asian
+font-variant-ligatures
+font-variant-numeric
+font-variant-position
+font-variation-settings
+font-weight
+----------------------------------------------------------------------
