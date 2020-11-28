@@ -1,4 +1,17 @@
+https://www.w3.org/Style/CSS/all-properties.en.html
 
+https://www.w3.org/TR/WD-font-970721
+
+
+https://www.w3.org/TR/css-fonts-4/#introduction
+
+https://sparanoid.com/lab/opentype-features/#aalt
+
+https://sparanoid.com/lab/opentype-features/
+
+https://simple.wikipedia.org/wiki/Ligature_(typography)
+
+https://en.wikipedia.org/wiki/Orthographic_ligature
 ----------------------------------------------------------------------
 @font-face
 
