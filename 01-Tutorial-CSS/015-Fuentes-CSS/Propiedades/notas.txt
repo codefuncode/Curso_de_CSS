@@ -12,6 +12,8 @@ https://sparanoid.com/lab/opentype-features/
 https://simple.wikipedia.org/wiki/Ligature_(typography)
 
 https://en.wikipedia.org/wiki/Orthographic_ligature
+
+http://www.fontslog.com/
 ----------------------------------------------------------------------
 @font-face
 
