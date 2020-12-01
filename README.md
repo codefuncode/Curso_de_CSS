@@ -9,6 +9,18 @@ Módulos completados
  - 001-Introduccion-a-CSS
  - 002-Sintaxis-CSS
  - 003-Selectores-CSS
+ - 004-Como-agregar-CSS
+ - 005-Comentarios-CSS
+ - 006-Colores-CSS
+ - 007-Fondos-CSS
+ - 008-Bordes-CSS
+ - 009-Márgenes-CSS
+ - 010-Relleno-CSS
+ - 011-Altura-y-ancho-de-CSS
+ - 012-Modelo-de-caja-de-CSS
+ - 013-Esquema-CSS
+ - 014-Texto-CSS
+ - 015-Fuentes-CSS
 
 
 
