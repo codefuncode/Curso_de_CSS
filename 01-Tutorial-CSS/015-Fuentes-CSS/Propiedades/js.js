@@ -10,13 +10,14 @@ var
     input_radio =
     document.querySelectorAll('[type="radio"]'),
 
-    display =
-    document.querySelectorAll('.display'),
     option_font_face = [],
     option_css_fonts_guide = [],
     option_css_fonts = [],
     control_en_curso,
-    head = document.head;
+    head = document.head,
+    _display = document.querySelector(".display");
+
+console.log(_display);
 
 // console.log(head);
 // ======================================================
@@ -142,6 +143,9 @@ function selecciona_caja_control(argument) {
                 controles[i].style.display = "block";
 
                 control_en_curso = controles[i];
+                muestra_control_en_curso();
+
+                gestiona_controles(i, control_en_curso);
 
             } else {
 
@@ -151,27 +155,179 @@ function selecciona_caja_control(argument) {
 
     }
 
+    // var x = _display.childNodes;
+    // console.log(x.length);
+    // if (x.length >= 0) {
+
+    //     for (var i = 0; i < x.length + 1; i++) {
+
+    //         x[i].remove();
+
+    //     }
+    // }
+    // console.log(x.length);
     // =======================================================
-    console.log("Control en curso = ");
-    console.log(control_en_curso);
-    var matrizx = [];
-    var x = control_en_curso.childNodes;
 
-    for (var i = 0; i < x.length; i++) {
+    // =======================================================
+}
 
-        if (x[i].nodeName == "SELECT") {
+function muestra_control_en_curso(argument) {
 
-            matrizx.push(x[i]);
+    // console.log("Control en curso = ");
+    // console.log(control_en_curso);
+    // var matrizx = [];
+    // var x = control_en_curso.childNodes;
 
-        } else {
+    // for (var i = 0; i < x.length; i++) {
 
-            // console.log(x[i]);
+    //     if (x[i].nodeName == "SELECT") {
+
+    //         matrizx.push(x[i]);
+
+    //     } else {
+
+    //         // console.log(x[i]);
+    //     }
+
+    // }
+
+    // console.log(matrizx);
+}
+
+function gestiona_controles(indice, control) {
+
+    var controles_select = [];
+
+    var todos_los_controles = []
+
+    var mensaje = "";
+
+    control = control.childNodes;
+
+    for (var i = 0; i < control.length; i++) {
+
+        if (control[i].nodeName == "SELECT") {
+
+            controles_select.push(control[i]);
+
+        } else if (control[i].type == "checkbox") {
+            console.log("checkbox");
+            console.log(control[i]);
+            console.log("========");
+        } else if (control[i].type == "text") {
+            console.log("text");
+            console.log(control[i]);
+            console.log("========");
         }
+
+        todos_los_controles.push(control[i]);
+    }
+
+    console.log(todos_los_controles);
+    mensaje = "Estas trabajando con el indice " + indice;
+    if (indice == 0) {
+
+        trabaja_fontface(controles_select);
+
+    } else if (indice == 1) {
+        // trabaja_font_face_font_display(controles_select);
+
+    } else if (indice == 2) {
+
+    } else if (indice == 3) {
+
+    } else if (indice == 4) {
+
+    } else if (indice == 5) {
+
+    } else if (indice == 6) {
+
+    } else if (indice == 7) {
+
+    } else if (indice == 8) {
+
+    } else if (indice == 9) {
+
+    } else if (indice == 10) {
+
+    } else if (indice == 11) {
+
+    } else if (indice == 12) {
+
+    } else if (indice == 13) {
+
+    } else if (indice == 14) {
+
+    } else if (indice == 15) {
+
+    } else if (indice == 16) {
+
+    } else if (indice == 17) {
+
+    } else if (indice == 18) {
+
+    } else if (indice == 19) {
+
+    } else if (indice == 20) {
+
+    } else if (indice == 21) {
+
+    } else if (indice == 22) {
+
+    } else if (indice == 23) {
+
+    } else if (indice == 24) {
+
+    } else if (indice == 25) {
+
+    } else if (indice == 26) {
+
+    } else if (indice == 27) {
+
+    } else if (indice == 28) {
+
+    } else if (indice == 29) {
+
+    } else if (indice == 30) {
 
     }
 
-    console.log(matrizx);
+    console.log(mensaje);
 
-    // =======================================================
+}
+
+function trabaja_fontface(argument) {
+
+    while (_display.firstChild) {
+        _display.removeChild(_display.lastChild);
+
+    }
+    var elementos = [];
+    for (var i = 0; i <= 9; i++) {
+        elementos.push(crea_elemento("p"));
+    }
+
+    for (var i = 0; i < elementos.length; i++) {
+
+        if (i == 0) {
+            elementos[i].innerHTML = "@font-face {";
+
+        } else if (i == elementos.length - 1) {
+
+            elementos[i].innerHTML = "}";
+
+        } else {
+            elementos[i].style.marginLeft = "75px";
+            elementos[i].innerHTML = "linea #" + i;
+        }
+
+        _display.appendChild(elementos[i]);
+    }
+
+}
+
+function crea_elemento(argument) {
+
+    return document.createElement(argument);
 }
 // ===================================================
