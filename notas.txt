@@ -3,3 +3,6 @@ sudo /opt/lampp/lampp start
 
 https://css-tricks.com/
 
+https://localhost/Proyectos/W3Schools-Offline-Version/Carpeta/W3Schools/default.html
+https://www.w3schools.com/default.asp
+

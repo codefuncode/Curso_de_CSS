@@ -14,7 +14,13 @@
     padding: 25px;
 }
 select, [type="text"] {
-    width: 350px;
+    width: 300px;
+    height: 30px;
+    background-color: #e7a99c;
+    /*color: green;*/
+    font-weight: bold;
+    /*border: 2px solid red;*/
+    /*border-radius: 50px 0px 0px 50px;*/
 }
 .seccion select {
     display: block;
@@ -78,3 +84,8 @@ a:hover, a:active {
     /*background-color: green;*/
     /*border: 2px solid #4CAF50;*/
 }
+.display p {
+    font-size: 11px;
+    font-weight: bold;
+}
+NUC-División Online.

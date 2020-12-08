@@ -13,100 +13,35 @@ var
     option_font_face = [],
     option_css_fonts_guide = [],
     option_css_fonts = [],
-    control_en_curso,
+    controles_activos = [],
+    caja_control_en_curso,
     head = document.head,
-    _display = document.querySelector(".display");
+    _pantalla = document.querySelector(".display");
 
-console.log(_display);
+for (var i = 0; i < controles.length; i++) {
+    controles[i].style.display = "none";
+}
+
+// console.log(_pantalla);
 
 // console.log(head);
 // ======================================================
 
 // ===============================================
-
-for (var i = 0; i < input_radio.length; i++) {
-
-    input_radio[i].
-    addEventListener('input', function(argument) {
-
-        console.log(this.value);
-
-    });
-}
+//  Mirar el valor de los input
+muestra_valor_rdio_input();
 
 // ===========================================================
 //  Aplica como valor el valor dentro de la etiqueta option correspondiente 
-for (var i = 0; i < select.length; i++) {
+aplicaValoresaOptions();
 
-    select[i].value = "";
-
-    for (var j = 0; j < select[i].children.length; j++) {
-
-        // console.log(select[i].children[j]);
-
-        select[i].children[j].value = select[i].children[j].textContent.trim();
-
-        // console.log(select[i].children[j].textContent.trim());
-    }
-
-    if (i == 0) {
-
-        for (let i = 0; i < select[0].children.length; i++) {
-
-            if (i != 0) {
-
-                option_font_face.push(
-                    select[0].children[i].textContent.trim());
-
-            }
-
-        }
-
-    } else if (i == 1) {
-
-        for (let i = 0; i < select[1].children.length; i++) {
-
-            if (i != 0) {
-
-                option_css_fonts_guide.push(
-                    select[1].children[i].textContent.trim());
-            }
-
-        }
-
-    } else if (i == 2) {
-
-        for (let i = 0; i < select[2].children.length; i++) {
-
-            if (i != 0) {
-
-                option_css_fonts.push(
-                    select[2].children[i].textContent.trim());
-            }
-
-        }
-
-    }
-
-}
-
+//  Concadenamos todas las opciones en una sola matriz
 var
     opciones_todas =
     option_font_face.concat(
         option_css_fonts_guide,
         option_css_fonts
     );
-
-console.log('===========   Todas las opciones   ===============');
-for (var i = 0; i < opciones_todas.length; i++) {
-
-    console.log(opciones_todas[i]);
-
-}
-
-console.log('===========   Todas las opciones   ===============');
-console.log(controles.length + " " + "controles");
-console.log(opciones_todas.length + " " + "opciones ");
 
 // ===================================================
 //  Mostrar caja de controles corespondiente 
@@ -116,11 +51,132 @@ for (var i = 0; i < select.length; i++) {
 
 }
 
-function selecciona_caja_control(argument) {
-    // console.log('=============');
-    console.log(this);
-    console.log(this.value);
+function trabaja_fontface(indice, select) {
 
+    // ======================
+    //  Borrara los nodos de párrafos si es que los hay 
+    borra_nodos();
+
+    // ======================
+
+    var elementos = [];
+
+    for (var i = 0; i <= select[indice].length; i++) {
+
+        elementos.push(crea_elemento("p"));
+    }
+    // console.log(elementos.length);
+    for (let i = 0; i < elementos.length; i++) {
+
+        if (i == 0) {
+
+            elementos[i].innerHTML = "@font-face {";
+
+        } else if (i == elementos.length - 1) {
+
+            elementos[i].innerHTML = "}";
+
+        } else {
+
+            elementos[i].style.marginLeft = "75px";
+
+        }
+
+        _pantalla.appendChild(elementos[i]);
+    }
+
+    // ===================================================
+    //  Escribe lo que hay en las opciones seleccionadas del primer 
+    //  select  dentro de los párrafos previamente generados 
+    for (var i = 0; i < select[indice].length; i++) {
+        if (i == 0) {} else {
+
+            elementos[i].innerHTML = select[indice][i].value + " :";
+        }
+    }
+    // ===================================================
+
+}
+
+// ============
+function muestra_valor_rdio_input(argument) {
+
+    for (var i = 0; i < input_radio.length; i++) {
+
+        input_radio[i].
+        addEventListener('input', function(argument) {
+
+            // console.log(this.value);
+
+        });
+    }
+}
+
+function aplicaValoresaOptions(argument) {
+
+    for (var i = 0; i < select.length; i++) {
+
+        select[i].value = "";
+
+        // ===============================
+        // Aplica el valor  de texto del nodo de la
+        // etiqueta como atributo de valor a la misma etiqueta 
+        for (var j = 0; j < select[i].children.length; j++) {
+
+            select[i].children[j].value =
+                select[i].children[j].textContent.trim();
+
+        }
+        // ===============================
+        // =================
+        //  Introduce en matrices los valores  de solo los tres primeros select 
+        if (i == 0) {
+
+            for (let i = 0; i < select[0].children.length; i++) {
+
+                if (i != 0) {
+
+                    option_font_face.push(
+                        select[0].children[i].textContent.trim());
+
+                }
+
+            }
+
+        } else if (i == 1) {
+
+            for (let i = 0; i < select[1].children.length; i++) {
+
+                if (i != 0) {
+
+                    option_css_fonts_guide.push(
+                        select[1].children[i].textContent.trim());
+                }
+
+            }
+
+        } else if (i == 2) {
+
+            for (let i = 0; i < select[2].children.length; i++) {
+
+                if (i != 0) {
+
+                    option_css_fonts.push(
+                        select[2].children[i].textContent.trim());
+                }
+
+            }
+
+        }
+        // =================
+    }
+}
+
+function selecciona_caja_control(argument) {
+
+    // ====================================================================
+    //  hace que los demás controles se coloquen 
+    // en la opción en blanco cuando uno de ellos cambia de valor
     for (var i = 0; i < select.length; i++) {
 
         if ((this == select[0] || this == select[1] || this == select[2])) {
@@ -133,7 +189,10 @@ function selecciona_caja_control(argument) {
         }
 
     }
+    // ====================================================================
 
+    // =================================================================
+    //  Muestra la caja correspondiente  de acuerdo a la opción seleccionada 
     if ((this == select[0] || this == select[1] || this == select[2])) {
 
         for (var i = 0; i < controles.length; i++) {
@@ -142,10 +201,10 @@ function selecciona_caja_control(argument) {
 
                 controles[i].style.display = "block";
 
-                control_en_curso = controles[i];
-                muestra_control_en_curso();
+                caja_control_en_curso = controles[i];
 
-                gestiona_controles(i, control_en_curso);
+                seleccionaControles(i, caja_control_en_curso);
+                gestiona_controles(i, caja_control_en_curso)
 
             } else {
 
@@ -154,180 +213,158 @@ function selecciona_caja_control(argument) {
         }
 
     }
-
-    // var x = _display.childNodes;
-    // console.log(x.length);
-    // if (x.length >= 0) {
-
-    //     for (var i = 0; i < x.length + 1; i++) {
-
-    //         x[i].remove();
-
-    //     }
-    // }
-    // console.log(x.length);
-    // =======================================================
+    // =================================================================
 
     // =======================================================
-}
-
-function muestra_control_en_curso(argument) {
-
-    // console.log("Control en curso = ");
-    // console.log(control_en_curso);
-    // var matrizx = [];
-    // var x = control_en_curso.childNodes;
-
-    // for (var i = 0; i < x.length; i++) {
-
-    //     if (x[i].nodeName == "SELECT") {
-
-    //         matrizx.push(x[i]);
-
-    //     } else {
-
-    //         // console.log(x[i]);
-    //     }
-
-    // }
-
-    // console.log(matrizx);
-}
-
-function gestiona_controles(indice, control) {
-
-    var controles_select = [];
-
-    var todos_los_controles = []
-
-    var mensaje = "";
-
-    control = control.childNodes;
-
-    for (var i = 0; i < control.length; i++) {
-
-        if (control[i].nodeName == "SELECT") {
-
-            controles_select.push(control[i]);
-
-        } else if (control[i].type == "checkbox") {
-            console.log("checkbox");
-            console.log(control[i]);
-            console.log("========");
-        } else if (control[i].type == "text") {
-            console.log("text");
-            console.log(control[i]);
-            console.log("========");
-        }
-
-        todos_los_controles.push(control[i]);
-    }
-
-    console.log(todos_los_controles);
-    mensaje = "Estas trabajando con el indice " + indice;
-    if (indice == 0) {
-
-        trabaja_fontface(controles_select);
-
-    } else if (indice == 1) {
-        // trabaja_font_face_font_display(controles_select);
-
-    } else if (indice == 2) {
-
-    } else if (indice == 3) {
-
-    } else if (indice == 4) {
-
-    } else if (indice == 5) {
-
-    } else if (indice == 6) {
-
-    } else if (indice == 7) {
-
-    } else if (indice == 8) {
-
-    } else if (indice == 9) {
-
-    } else if (indice == 10) {
-
-    } else if (indice == 11) {
-
-    } else if (indice == 12) {
-
-    } else if (indice == 13) {
-
-    } else if (indice == 14) {
-
-    } else if (indice == 15) {
-
-    } else if (indice == 16) {
-
-    } else if (indice == 17) {
-
-    } else if (indice == 18) {
-
-    } else if (indice == 19) {
-
-    } else if (indice == 20) {
-
-    } else if (indice == 21) {
-
-    } else if (indice == 22) {
-
-    } else if (indice == 23) {
-
-    } else if (indice == 24) {
-
-    } else if (indice == 25) {
-
-    } else if (indice == 26) {
-
-    } else if (indice == 27) {
-
-    } else if (indice == 28) {
-
-    } else if (indice == 29) {
-
-    } else if (indice == 30) {
-
-    }
-
-    console.log(mensaje);
-
-}
-
-function trabaja_fontface(argument) {
-
-    while (_display.firstChild) {
-        _display.removeChild(_display.lastChild);
-
-    }
-    var elementos = [];
-    for (var i = 0; i <= 9; i++) {
-        elementos.push(crea_elemento("p"));
-    }
-
-    for (var i = 0; i < elementos.length; i++) {
-
-        if (i == 0) {
-            elementos[i].innerHTML = "@font-face {";
-
-        } else if (i == elementos.length - 1) {
-
-            elementos[i].innerHTML = "}";
-
-        } else {
-            elementos[i].style.marginLeft = "75px";
-            elementos[i].innerHTML = "linea #" + i;
-        }
-
-        _display.appendChild(elementos[i]);
-    }
-
 }
 
 function crea_elemento(argument) {
 
     return document.createElement(argument);
 }
-// ===================================================
+
+function gestiona_controles(indice, control) {
+
+    var todos_los_controles = [],
+        t_input_select = [],
+        t_input_checkbox = [],
+        t_input_text = [],
+        t_input_radio = [];
+
+    var mensaje = "";
+
+    control = control.childNodes;
+
+    // =======================================
+    //  BUcle que pretende seleccionar y dividios 
+    //  los controles por  tipo de etiqueta  y agregarlos a una matriz
+    //  para luego pasarla parámetro para ser usados en el programa 
+    for (var i = 0; i < control.length; i++) {
+        // console.log(control[i].nodeName);
+
+        if (control[i].nodeName == "SELECT") {
+
+            t_input_select.push(control[i]);
+
+        } else if (control[i].type == "checkbox") {
+
+            t_input_checkbox.push(control[i]);
+
+        } else if (control[i].type == "text") {
+
+            t_input_text.push(control[i]);
+
+        } else if (control[i].type == "radio") {
+
+            t_input_radio.push(control[i]);
+        }
+        // =============================================
+        //  Posibilidad de pasar todos los controles 
+        //  Le falta separar los nodos de texto para limpiar
+        //  de nodos no deseados 
+        todos_los_controles.push(control[i]);
+        // =============================================
+    }
+
+    aplicafuncion(
+        indice,
+        t_input_select,
+        t_input_checkbox,
+        t_input_text,
+        t_input_radio
+    );
+    // =======================================
+
+    mensaje =
+        "Estas trabajando con el indice " + indice;
+
+    // console.log(mensaje);
+
+}
+
+function seleccionaControles(indice, caja_controles) {
+
+    var todos_los_controles = [],
+        t_input_select = [],
+        t_input_checkbox = [],
+        t_input_text = [],
+        t_input_radio = [];
+
+    var mensaje = "";
+
+    control = caja_controles.childNodes;
+
+    // =======================================
+    //  BUcle que pretende seleccionar y dividios 
+    //  los controles por  tipo de etiqueta  y agregarlos a una matriz
+    //  para luego pasarla parámetro para ser usados en el programa 
+    for (var i = 0; i < control.length; i++) {
+        // console.log(control[i].nodeName);
+
+        if (control[i].nodeName == "SELECT") {
+
+            t_input_select.push(control[i]);
+            // console.log(control[i]);
+
+        } else if (control[i].type == "checkbox") {
+
+            t_input_checkbox.push(control[i]);
+            // console.log(control[i]);
+
+        } else if (control[i].type == "text") {
+
+            t_input_text.push(control[i]);
+            // console.log(control[i]);
+
+        } else if (control[i].type == "radio") {
+
+            t_input_radio.push(control[i]);
+            // console.log(control[i]);
+
+        } else if (control[i].nodeName == "LABEL") {
+
+            // console.log(control[i]);
+
+        }
+        // =============================================
+        //  Posibilidad de pasar todos los controles 
+        //  Le falta separar los nodos de texto para limpiar
+        //  de nodos no deseados 
+        todos_los_controles.push(control[i]);
+        // =============================================
+    }
+
+    // =======================================
+
+    mensaje = "Estas trabajando con el indice " + indice;
+    console.log(mensaje);
+
+}
+
+function aplicafuncion(index, select, checkbox, text, radio) {
+
+    funcion_Control[index](index, select, checkbox, text, radio);
+
+    for (var i = 0; i < select.length; i++) {
+
+        select[i].addEventListener("input", function(argument) {
+
+            console.log(this.value);
+        });
+
+    }
+
+}
+
+// ================================================================
+// Borara todos los nodos existentes dentyro de la pantalla
+function borra_nodos(argument) {
+
+    while (_pantalla.firstChild) {
+
+        _pantalla.removeChild(_pantalla.lastChild);
+
+    }
+}
+
+// ================================================================
