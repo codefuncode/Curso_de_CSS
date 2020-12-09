@@ -16,10 +16,13 @@ var
     controles_activos = [],
     caja_control_en_curso,
     head = document.head,
-    _pantalla = document.querySelector(".display");
+    _pantalla = document.querySelector(".display"),
+    enlace = document.querySelectorAll("a");
 
-for (var i = 0; i < controles.length; i++) {
-    controles[i].style.display = "none";
+for (var i = 0; i < enlace.length; i++) {
+
+    enlace[i].setAttribute("target", "_blank");
+
 }
 
 // console.log(_pantalla);
