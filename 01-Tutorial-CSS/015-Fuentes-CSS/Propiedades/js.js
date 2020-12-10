@@ -25,6 +25,10 @@ for (var i = 0; i < enlace.length; i++) {
 
 }
 
+for (var i = 0; i < controles.length; i++) {
+    controles[i].style.display = "none";
+}
+
 // console.log(_pantalla);
 
 // console.log(head);

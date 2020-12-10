@@ -83,7 +83,9 @@ funcion_Control[0] =
 
                     _pantalla.childNodes[6].innerHTML =
                         "font-weight : " + this.value + ";";
+
                 } else if (this == select[6]) {
+
                     console.log(this);
                 }
 
