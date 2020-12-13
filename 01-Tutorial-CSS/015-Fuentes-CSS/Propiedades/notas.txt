@@ -398,3 +398,9 @@ font-weight
 ----------------------------------------------------------------------
 
 
+
+font-variant-alternates
+font-variant-caps
+font-variant-east-asian
+font-variant-ligatures
+font-variant-numeric

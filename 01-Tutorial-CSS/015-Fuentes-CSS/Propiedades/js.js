@@ -209,9 +209,8 @@ function selecciona_caja_control(argument) {
                 controles[i].style.display = "block";
 
                 caja_control_en_curso = controles[i];
-
-                seleccionaControles(i, caja_control_en_curso);
-                gestiona_controles(i, caja_control_en_curso)
+                // seleccionaControles(i, caja_control_en_curso);
+                gestiona_controles(i, caja_control_en_curso);
 
             } else {
 
@@ -236,7 +235,8 @@ function gestiona_controles(indice, control) {
         t_input_select = [],
         t_input_checkbox = [],
         t_input_text = [],
-        t_input_radio = [];
+        t_input_radio = [],
+        t_label = [];
 
     var mensaje = "";
 
@@ -264,6 +264,9 @@ function gestiona_controles(indice, control) {
         } else if (control[i].type == "radio") {
 
             t_input_radio.push(control[i]);
+        } else if (control[i].nodeName == "LABEL") {
+
+            t_label.push(control[i]);
         }
         // =============================================
         //  Posibilidad de pasar todos los controles 
@@ -272,85 +275,79 @@ function gestiona_controles(indice, control) {
         todos_los_controles.push(control[i]);
         // =============================================
     }
-
+    mensaje = "Estas trabajando con el indice " + (indice + 1);
+    console.log(mensaje);
     aplicafuncion(
         indice,
         t_input_select,
         t_input_checkbox,
         t_input_text,
-        t_input_radio
+        t_input_radio,
+        t_label
     );
     // =======================================
 
-    mensaje =
-        "Estas trabajando con el indice " + indice;
-
-    // console.log(mensaje);
-
 }
 
-function seleccionaControles(indice, caja_controles) {
+// function seleccionaControles(indice, caja_controles) {
 
-    var todos_los_controles = [],
-        t_input_select = [],
-        t_input_checkbox = [],
-        t_input_text = [],
-        t_input_radio = [];
+//     var todos_los_controles = [],
+//         t_input_select = [],
+//         t_input_checkbox = [],
+//         t_input_text = [],
+//         t_input_radio = [];
 
-    var mensaje = "";
+//     var mensaje = "";
 
-    control = caja_controles.childNodes;
+//     control = caja_controles.childNodes;
 
-    // =======================================
-    //  BUcle que pretende seleccionar y dividios 
-    //  los controles por  tipo de etiqueta  y agregarlos a una matriz
-    //  para luego pasarla parámetro para ser usados en el programa 
-    for (var i = 0; i < control.length; i++) {
-        // console.log(control[i].nodeName);
+//     // =======================================
+//     //  BUcle que pretende seleccionar y dividios 
+//     //  los controles por  tipo de etiqueta  y agregarlos a una matriz
+//     //  para luego pasarla parámetro para ser usados en el programa 
+//     for (var i = 0; i < control.length; i++) {
+//         // console.log(control[i].nodeName);
 
-        if (control[i].nodeName == "SELECT") {
+//         if (control[i].nodeName == "SELECT") {
 
-            t_input_select.push(control[i]);
-            // console.log(control[i]);
+//             t_input_select.push(control[i]);
+//             // console.log(control[i]);
 
-        } else if (control[i].type == "checkbox") {
+//         } else if (control[i].type == "checkbox") {
 
-            t_input_checkbox.push(control[i]);
-            // console.log(control[i]);
+//             t_input_checkbox.push(control[i]);
+//             // console.log(control[i]);
 
-        } else if (control[i].type == "text") {
+//         } else if (control[i].type == "text") {
 
-            t_input_text.push(control[i]);
-            // console.log(control[i]);
+//             t_input_text.push(control[i]);
+//             // console.log(control[i]);
 
-        } else if (control[i].type == "radio") {
+//         } else if (control[i].type == "radio") {
 
-            t_input_radio.push(control[i]);
-            // console.log(control[i]);
+//             t_input_radio.push(control[i]);
+//             // console.log(control[i]);
 
-        } else if (control[i].nodeName == "LABEL") {
+//         } else if (control[i].nodeName == "LABEL") {
 
-            // console.log(control[i]);
+//             // console.log(control[i]);
 
-        }
-        // =============================================
-        //  Posibilidad de pasar todos los controles 
-        //  Le falta separar los nodos de texto para limpiar
-        //  de nodos no deseados 
-        todos_los_controles.push(control[i]);
-        // =============================================
-    }
+//         }
+//         // =============================================
+//         //  Posibilidad de pasar todos los controles 
+//         //  Le falta separar los nodos de texto para limpiar
+//         //  de nodos no deseados 
+//         todos_los_controles.push(control[i]);
+//         // =============================================
+//     }
 
-    // =======================================
+//     // =======================================
 
-    mensaje = "Estas trabajando con el indice " + indice;
-    console.log(mensaje);
+// }
 
-}
+function aplicafuncion(index, select, checkbox, text, radio, label) {
 
-function aplicafuncion(index, select, checkbox, text, radio) {
-
-    funcion_Control[index](index, select, checkbox, text, radio);
+    funcion_Control[index](index, select, checkbox, text, radio, label);
 
     for (var i = 0; i < select.length; i++) {
 
