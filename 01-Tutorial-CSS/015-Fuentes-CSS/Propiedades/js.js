@@ -289,62 +289,6 @@ function gestiona_controles(indice, control) {
 
 }
 
-// function seleccionaControles(indice, caja_controles) {
-
-//     var todos_los_controles = [],
-//         t_input_select = [],
-//         t_input_checkbox = [],
-//         t_input_text = [],
-//         t_input_radio = [];
-
-//     var mensaje = "";
-
-//     control = caja_controles.childNodes;
-
-//     // =======================================
-//     //  BUcle que pretende seleccionar y dividios 
-//     //  los controles por  tipo de etiqueta  y agregarlos a una matriz
-//     //  para luego pasarla parámetro para ser usados en el programa 
-//     for (var i = 0; i < control.length; i++) {
-//         // console.log(control[i].nodeName);
-
-//         if (control[i].nodeName == "SELECT") {
-
-//             t_input_select.push(control[i]);
-//             // console.log(control[i]);
-
-//         } else if (control[i].type == "checkbox") {
-
-//             t_input_checkbox.push(control[i]);
-//             // console.log(control[i]);
-
-//         } else if (control[i].type == "text") {
-
-//             t_input_text.push(control[i]);
-//             // console.log(control[i]);
-
-//         } else if (control[i].type == "radio") {
-
-//             t_input_radio.push(control[i]);
-//             // console.log(control[i]);
-
-//         } else if (control[i].nodeName == "LABEL") {
-
-//             // console.log(control[i]);
-
-//         }
-//         // =============================================
-//         //  Posibilidad de pasar todos los controles 
-//         //  Le falta separar los nodos de texto para limpiar
-//         //  de nodos no deseados 
-//         todos_los_controles.push(control[i]);
-//         // =============================================
-//     }
-
-//     // =======================================
-
-// }
-
 function aplicafuncion(index, select, checkbox, text, radio, label) {
 
     funcion_Control[index](index, select, checkbox, text, radio, label);

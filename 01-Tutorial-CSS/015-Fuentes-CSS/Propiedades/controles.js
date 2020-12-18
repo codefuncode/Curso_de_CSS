@@ -1,9 +1,11 @@
 var funcion_Control = [];
 
 funcion_Control[0] =
-    function(index, select, checkbox, text, radio, label) {
+    function(
+        index, select, checkbox, text, radio, label) {
 
-        cuentaControles(select, checkbox, text, radio, label);
+        cuentaControles(
+            select, checkbox, text, radio, label);
 
         for (var i = 0; i < text.length; i++) {
             text[i].value = "";
@@ -19,35 +21,38 @@ funcion_Control[0] =
 
         for (var i = 0; i < text.length; i++) {
 
-            text[i].addEventListener("input", function(argument) {
+            text[i].addEventListener("input",
+                function(argument) {
 
-                if (this == text[0]) {
+                    if (this == text[0]) {
 
-                    if (this.value == "") {
+                        if (this.value == "") {
 
-                        _pantalla.childNodes[1].innerHTML =
-                            "font-family : " + '"' + this.value + '"' + "";
-                    } else {
+                            _pantalla.childNodes[1].innerHTML =
+                                "font-family : " + '"' +
+                                this.value + '"' + "";
+                        } else {
 
-                        _pantalla.childNodes[1].innerHTML =
-                            "font-family : " + '"' + this.value + '"' + " ;";
+                            _pantalla.childNodes[1].innerHTML =
+                                "font-family : " + '"' +
+                                this.value + '"' + " ;";
+                        }
+
+                    } else if (this == text[1]) {
+
+                        if (select[1].value == "url") {
+
+                            _pantalla.childNodes[2].innerHTML =
+                                "src : url (" + this.value + ");";
+
+                        } else if (select[1].value == "local") {
+
+                            _pantalla.childNodes[2].innerHTML =
+                                "src : local (" + this.value + ");";
+                        }
+
                     }
-
-                } else if (this == text[1]) {
-
-                    if (select[1].value == "url") {
-
-                        _pantalla.childNodes[2].innerHTML =
-                            "src : url (" + this.value + ");";
-
-                    } else if (select[1].value == "local") {
-
-                        _pantalla.childNodes[2].innerHTML =
-                            "src : local (" + this.value + ");";
-                    }
-
-                }
-            })
+                })
 
         }
 
@@ -65,14 +70,16 @@ funcion_Control[0] =
 
                         text[1].setAttribute(
                             "placeholder",
-                            "Escribe la " + this.value + " externa en esta caja"
+                            "Escribe la " + this.value +
+                            " externa en esta caja"
                         );
 
                     } else if (this.value == "local") {
 
                         text[1].setAttribute(
                             "placeholder",
-                            "Escribe la url " + this.value + " en esta caja");
+                            "Escribe la url " + this.value +
+                            " en esta caja");
                     }
 
                 } else if (this == select[2]) {
@@ -95,17 +102,26 @@ funcion_Control[0] =
                     _pantalla.childNodes[6].innerHTML =
                         "font-weight : " + this.value + ";";
 
-                } else if (this == select[6]) {
+                } else if (
+                    this ==
+                    select[6] ||
+                    this == select[7] ||
+                    this == select[8] ||
+                    this == select[9] ||
+                    this == select[10] ||
+                    this == select[11]
+                ) {
 
-                } else if (this == select[7]) {
+                    // borra_nodos();
+                    let elementos = [];
+                    console.log(_pantalla.childNodes);
+                    console.log(_pantalla.childNodes.length);
 
-                } else if (this == select[8]) {
-
-                } else if (this == select[9]) {
-
-                } else if (this == select[10]) {
-
-                } else if (this == select[11]) {
+                    for (var i = 0; i <
+                        _pantalla.childNodes.length; i++) {
+                        elementos.push(_pantalla.childNodes[i]);
+                    }
+                    console.log(elementos);
 
                 } else if (this == select[12]) {
 
@@ -304,13 +320,18 @@ function cuentaControles(select, checkbox, text, radio, label) {
     console.log('======================');
     console.log("select.length");
     console.log(select.length);
+    console.log(select);
     console.log("text.length");
     console.log(text.length);
+    console.log(text);
     console.log("radio.length");
     console.log(radio.length);
+    console.log(radio);
     console.log("checkbox.length");
     console.log(checkbox.length);
+    console.log(checkbox);
     console.log("label.length");
     console.log(label.length);
+    console.log(label);
     console.log('======================');
 }
