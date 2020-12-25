@@ -330,36 +330,6 @@ https://www.1001fonts.com/opentype+ligatures-fonts.html
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @font-face.font-family
 @font-face.font-style
 @font-face.font-variation-settings
@@ -404,3 +374,178 @@ font-variant-caps
 font-variant-east-asian
 font-variant-ligatures
 font-variant-numeric
+
+
+
+
+============================================================================
+
+Descripción general de OpenType®
+
+    16/03/2018
+    5 minutos para leer
+
+OpenType es un formato de fuente desarrollado conjuntamente por Microsoft y Adobe como una extensión del formato de fuente TrueType de Apple. La especificación de fuente OpenType 1.0 se lanzó en 1997. Desde entonces, Adobe y Microsoft han continuado trabajando juntos para actualizar y perfeccionar la especificación. Varias otras empresas, incluidas Apple y Monotype, también han contribuido a la especificación a lo largo de los años. Actualmente, todas las principales fundiciones de fuentes y la mayoría de las menores están desarrollando fuentes en formato OpenType.
+
+OpenType ofrece varias ventajas sobre las tecnologías de fuentes más antiguas:
+
+    Límite de glifos más grande (64 k)
+    Soporte multiplataforma (Win y Mac)
+    Soporte para esquemas PostScript Type 1 o TrueType
+    Soporte para funciones tipográficas avanzadas
+
+OpenType, como TrueType, se basa en Unicode, el sistema para codificar todos los sistemas de escritura del mundo. Las fuentes OpenType pueden contener potencialmente muchos miles de caracteres. Esto significa que una fuente OpenType puede contener varios alfabetos (como latín, griego y cirílico; o kanji, kana y romaji para uso japonés). Las fuentes OpenType también pueden incluir refinamientos tipográficos como versalitas verdaderas, diferentes estilos de figuras y conjuntos extensos de ligaduras y alternativas, así como conjuntos completos de caracteres acentuados y signos diacríticos. Las diferentes aplicaciones tienen diferentes niveles de soporte para todas las funciones de OpenType.
+
+La versión 1.4 de OpenType se contribuyó a ISO y se convirtió en la base para el desarrollo del estándar ISO / IEC 14496-22 “Open Font Format”. El estándar se publicó en 2007 y ahora se puede descargar gratuitamente del sitio web de la ITTF [ https://standards.iso.org/ittf/ ]. La versión 1.6 de OpenType es idéntica a la versión “Final Draft International Standard” de ISO / IEC 14496-22 FDIS “Open Font Format” (segunda edición).
+
+Para obtener más información sobre las fuentes OpenType, consulte la versión más reciente de la especificación OpenType y las preguntas frecuentes que aparecen a continuación.
+
+Feature Tag 			Friendly Name
+'aalt' 					Access All Alternates
+'abvf' 					Above-base Forms
+'abvm' 					Above-base Mark Positioning
+'abvs' 					Above-base Substitutions
+'afrc' 					Alternative Fractions
+'akhn' 					Akhands
+'blwf' 					Below-base Forms
+'blwm' 					Below-base Mark Positioning
+'blws' 					Below-base Substitutions
+'calt' 					Contextual Alternates
+'case' 					Case-Sensitive Forms
+'ccmp' 					Glyph Composition / Decomposition
+'cfar' 					Conjunct Form After Ro
+'chws' 					Contextual Half-width Spacing
+'cjct' 					Conjunct Forms
+'clig' 					Contextual Ligatures
+'cpct' 					Centered CJK Punctuation
+'cpsp' 					Capital Spacing
+'cswh' 					Contextual Swash
+'curs' 					Cursive Positioning
+'cv01' – 'cv99' 		Character Variants
+'c2pc' 					Petite Capitals From Capitals
+'c2sc' 					Small Capitals From Capitals
+'dist' 					Distances
+'dlig' 					Discretionary Ligatures
+'dnom' 					Denominators
+'dtls' 					Dotless Forms
+'expt' 					Expert Forms
+'falt' 					Final Glyph on Line Alternates
+'fin2' 					Terminal Forms #2
+'fin3' 					Terminal Forms #3
+'fina' 					Terminal Forms
+'flac' 					Flattened accent forms
+'frac' 					Fractions
+'fwid' 					Full Widths
+'half' 					Half Forms
+'haln' 					Halant Forms
+'halt' 					Alternate Half Widths
+'hist' 					Historical Forms
+'hkna' 					Horizontal Kana Alternates
+'hlig' 					Historical Ligatures
+'hngl' 					Hangul
+'hojo' 					Hojo Kanji Forms (JIS X 0212-1990 Kanji Forms)
+'hwid' 					Half Widths
+'init' 					Initial Forms
+'isol' 					Isolated Forms
+'ital' 					Italics
+'jalt' 					Justification Alternates
+'jp78' 					JIS78 Forms
+'jp83' 					JIS83 Forms
+'jp90' 					JIS90 Forms
+'jp04' 					JIS2004 Forms
+'kern' 					Kerning
+'lfbd' 					Left Bounds
+'liga' 					Standard Ligatures
+'ljmo' 					Leading Jamo Forms
+'lnum' 					Lining Figures
+'locl' 					Localized Forms
+'ltra' 					Left-to-right alternates
+'ltrm' 					Left-to-right mirrored forms
+'mark' 					Mark Positioning
+'med2' 					Medial Forms #2
+'medi' 					Medial Forms
+'mgrk' 					Mathematical Greek
+'mkmk' 					Mark to Mark Positioning
+'mset' 					Mark Positioning via Substitution
+'nalt' 					Alternate Annotation Forms
+'nlck' 					NLC Kanji Forms
+'nukt' 					Nukta Forms
+'numr' 					Numerators
+'onum' 					Oldstyle Figures
+'opbd' 					Optical Bounds
+'ordn' 					Ordinals
+'ornm' 					Ornaments
+'palt' 					Proportional Alternate Widths
+'pcap' 					Petite Capitals
+'pkna' 					Proportional Kana
+'pnum' 					Proportional Figures
+'pref' 					Pre-Base Forms
+'pres' 					Pre-base Substitutions
+'pstf' 					Post-base Forms
+'psts' 					Post-base Substitutions
+'pwid' 					Proportional Widths
+'qwid' 					Quarter Widths
+'rand' 					Randomize
+'rclt' 					Required Contextual Alternates
+'rkrf' 					Rakar Forms
+'rlig' 					Required Ligatures
+'rphf' 					Reph Forms
+'rtbd' 					Right Bounds
+'rtla' 					Right-to-left alternates
+'rtlm' 					Right-to-left mirrored forms
+'ruby' 					Ruby Notation Forms
+'rvrn' 					Required Variation Alternates
+'salt' 					Stylistic Alternates
+'sinf' 					Scientific Inferiors
+'size' 					Optical size
+'smcp' 					Small Capitals
+'smpl' 					Simplified Forms
+'ss01' 					Stylistic Set 1
+'ss02' 					Stylistic Set 2
+'ss03' 					Stylistic Set 3
+'ss04' 					Stylistic Set 4
+'ss05' 					Stylistic Set 5
+'ss06' 					Stylistic Set 6
+'ss07' 					Stylistic Set 7
+'ss08' 					Stylistic Set 8
+'ss09' 					Stylistic Set 9
+'ss10' 					Stylistic Set 10
+'ss11' 					Stylistic Set 11
+'ss12' 					Stylistic Set 12
+'ss13' 					Stylistic Set 13
+'ss14' 					Stylistic Set 14
+'ss15' 					Stylistic Set 15
+'ss16' 					Stylistic Set 16
+'ss17' 					Stylistic Set 17
+'ss18' 					Stylistic Set 18
+'ss19' 					Stylistic Set 19
+'ss20' 					Stylistic Set 20
+'ssty' 					Math script style alternates
+'stch' 					Stretching Glyph Decomposition
+'subs' 					Subscript
+'sups' 					Superscript
+'swsh' 					Swash
+'titl' 					Titling
+'tjmo' 					Trailing Jamo Forms
+'tnam' 					Traditional Name Forms
+'tnum' 					Tabular Figures
+'trad' 					Traditional Forms
+'twid' 					Third Widths
+'unic' 					Unicase
+'valt' 					Alternate Vertical Metrics
+'vatu' 					Vattu Variants
+'vchw' 					Vertical Contextual Half-width Spacing
+'vert' 					Vertical Writing
+'vhal' 					Alternate Vertical Half Metrics
+'vjmo' 					Vowel Jamo Forms
+'vkna' 					Vertical Kana Alternates
+'vkrn' 					Vertical Kerning
+'vpal' 					Proportional Alternate Vertical Metrics
+'vrt2' 					Vertical Alternates and Rotation
+'vrtr' 					Vertical Alternates for Rotation
+'zero' 					Slashed Zero
+
+Referencia 
+https://docs.microsoft.com/en-us/typography/opentype/spec/featurelist
+
+https://en.wikipedia.org/wiki/List_of_typographic_features#OpenType_typographic_features

@@ -5,9 +5,14 @@ funcion_Control[0] =
         index, select, checkbox, text, radio, label) {
 
         cuentaControles(
-            select, checkbox, text, radio, label);
+            select,
+            checkbox,
+            text,
+            radio,
+            label);
 
         for (var i = 0; i < text.length; i++) {
+
             text[i].value = "";
         }
 
