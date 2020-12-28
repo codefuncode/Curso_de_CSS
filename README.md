@@ -6,7 +6,7 @@ En este repositorio encontraras todos los documentos utilizados en el curso  Est
 
 Módulos completados 
 
- - 001-Introduccion-a-CSS
+ - 001-Introducción-a-CSS
  - 002-Sintaxis-CSS
  - 003-Selectores-CSS
  - 004-Como-agregar-CSS
@@ -20,7 +20,7 @@ Módulos completados
  - 012-Modelo-de-caja-de-CSS
  - 013-Esquema-CSS
  - 014-Texto-CSS
- - 015-Fuentes-CSS
+ - 015-Fuentes-CSS "Se trabaja con una interfaz de usuario para facilitar la comprensión del usuario"
 
 
 

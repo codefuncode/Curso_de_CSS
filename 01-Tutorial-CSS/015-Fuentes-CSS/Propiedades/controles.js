@@ -1,28 +1,56 @@
 var funcion_Control = [];
 
 funcion_Control[0] =
-    function(
-        index, select, checkbox, text, radio, label) {
+    function(index, select, checkbox, text, radio, label) {
 
-        cuentaControles(
-            select,
-            checkbox,
-            text,
-            radio,
-            label);
+        var propiedades = {
+            font_family: "",
+            src: {
+                url: "",
+                local: ""
+            },
+            font_display: "",
+            font_stretch: "",
+            font_style: "",
+            font_weight: "",
+            font_variant: "",
+            font_variant_alternates: "",
+            font_variant_caps: "",
+            font_variant_east_asian: "",
+            font_variant_ligatures: "",
+            font_variant_numeric: "",
+        };
+        var valores = [];
+
+        cuentaControles(select, checkbox, text, radio, label);
+
+        checkbox[0].disabled = true;
 
         for (var i = 0; i < text.length; i++) {
 
             text[i].value = "";
         }
 
-        // checkbox[0].checked = true;
-
         text[0].setAttribute(
             "placeholder",
             "Escribe el nombre de la fuente");
 
-        trabaja_fontface(index, select);
+        for (var i = 0; i < checkbox.length; i++) {
+
+            checkbox[i].addEventListener("input", function(e) {
+
+                for (var i = 0; i < checkbox.length; i++) {
+
+                    if (e.target == checkbox[i]) {
+                        console.log(i);
+                    }
+                }
+
+                console.log(this.checked);
+
+            });
+
+        }
 
         for (var i = 0; i < text.length; i++) {
 
@@ -30,33 +58,37 @@ funcion_Control[0] =
                 function(argument) {
 
                     if (this == text[0]) {
-
+                        propiedades.font_family =
+                            "font-family : " + '"' + this.value + '"' + ";";
+                        valores[0] = propiedades.font_family;
                         if (this.value == "") {
 
-                            _pantalla.childNodes[1].innerHTML =
-                                "font-family : " + '"' +
-                                this.value + '"' + "";
                         } else {
 
-                            _pantalla.childNodes[1].innerHTML =
-                                "font-family : " + '"' +
-                                this.value + '"' + " ;";
                         }
 
                     } else if (this == text[1]) {
 
                         if (select[1].value == "url") {
+                            propiedades.src.url = "src : url (" + this.value + ");";
+                            valores[1] =
+                                propiedades.src.url;
 
-                            _pantalla.childNodes[2].innerHTML =
-                                "src : url (" + this.value + ");";
+                            propiedades.src.local = "";
 
                         } else if (select[1].value == "local") {
 
-                            _pantalla.childNodes[2].innerHTML =
-                                "src : local (" + this.value + ");";
+                            propiedades.src.local = "src : local (" + this.value + ");";
+                            valores[1] =
+                                propiedades.src.local;
+                            propiedades.src.url = "";
+
                         }
 
                     }
+
+                    muestra_valores(valores);
+
                 })
 
         }
@@ -66,8 +98,6 @@ funcion_Control[0] =
             select[i].addEventListener("input", function(argument) {
 
                 if (this == select[0]) {
-
-                    console.log("ok");
 
                 } else if (this == select[1]) {
 
@@ -89,23 +119,23 @@ funcion_Control[0] =
 
                 } else if (this == select[2]) {
 
-                    _pantalla.childNodes[3].innerHTML =
-                        "font-display : " + this.value + ";";
+                    propiedades.font_display = "font-display : " + this.value + ";";
+                    valores[2] = propiedades.font_display;
 
                 } else if (this == select[3]) {
 
-                    _pantalla.childNodes[4].innerHTML =
-                        "font-stretch : " + this.value + ";";
+                    propiedades.font_stretch = "font-stretch : " + this.value + ";";
+                    valores[3] = propiedades.font_stretch;
 
                 } else if (this == select[4]) {
 
-                    _pantalla.childNodes[5].innerHTML =
-                        "font-style : " + this.value + ";";
+                    propiedades.font_style = "font-style : " + this.value + ";";
+                    valores[4] = propiedades.font_style;
 
                 } else if (this == select[5]) {
 
-                    _pantalla.childNodes[6].innerHTML =
-                        "font-weight : " + this.value + ";";
+                    propiedades.font_weight = "font-weight : " + this.value + ";";
+                    valores[5] = propiedades.font_weight;
 
                 } else if (
                     this ==
@@ -117,16 +147,19 @@ funcion_Control[0] =
                     this == select[11]
                 ) {
 
-                    // borra_nodos();
-                    let elementos = [];
-                    console.log(_pantalla.childNodes);
-                    console.log(_pantalla.childNodes.length);
+                    if (this == select[6]) {
 
-                    for (var i = 0; i <
-                        _pantalla.childNodes.length; i++) {
-                        elementos.push(_pantalla.childNodes[i]);
+                    } else if (this == select[7]) {
+
+                    } else if (this == select[8]) {
+
+                    } else if (this == select[9]) {
+
+                    } else if (this == select[10]) {
+
+                    } else if (this == select[11]) {
+
                     }
-                    console.log(elementos);
 
                 } else if (this == select[12]) {
 
@@ -134,17 +167,37 @@ funcion_Control[0] =
 
                 }
 
-                // console.log(this.value);
+                if (this == select[6]) {
+
+                    panel.style.display = "";
+
+                } else {
+                    panel.style.display = "none";
+                }
+                muestra_valores(valores);
             });
 
         }
 
+        function muestra_valores(valores) {
+
+            for (var i = 0; i < valores.length; i++) {
+                if (valores[i] == null) {
+
+                    valores[i] = "";
+                }
+            }
+            console.log(valores);
+        }
+
+        comportaminetoTexto(index, select);
     };
 
 funcion_Control[1] =
     function(index, select, checkbox, text, radio, label) {
 
         cuentaControles(select, checkbox, text, radio, label);
+        comportaminetoTexto(index);
     };
 
 funcion_Control[2] =

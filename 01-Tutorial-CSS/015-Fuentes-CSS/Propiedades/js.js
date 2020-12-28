@@ -16,8 +16,11 @@ var
     controles_activos = [],
     caja_control_en_curso,
     head = document.head,
-    _pantalla = document.querySelector(".display"),
-    enlace = document.querySelectorAll("a");
+    _pantalla = document.querySelector(".display .reglas"),
+    enlace = document.querySelectorAll("a"),
+    panel = document.querySelector(".display .w3-panel");
+
+panel.style.display = "none";
 
 for (var i = 0; i < enlace.length; i++) {
 
@@ -55,53 +58,6 @@ var
 for (var i = 0; i < select.length; i++) {
 
     select[i].addEventListener('input', selecciona_caja_control);
-
-}
-
-function trabaja_fontface(indice, select) {
-
-    // ======================
-    //  Borrara los nodos de párrafos si es que los hay 
-    borra_nodos();
-
-    // ======================
-
-    var elementos = [];
-
-    for (var i = 0; i <= select[indice].length; i++) {
-
-        elementos.push(crea_elemento("p"));
-    }
-    // console.log(elementos.length);
-    for (let i = 0; i < elementos.length; i++) {
-
-        if (i == 0) {
-
-            elementos[i].innerHTML = "@font-face {";
-
-        } else if (i == elementos.length - 1) {
-
-            elementos[i].innerHTML = "}";
-
-        } else {
-
-            elementos[i].style.marginLeft = "75px";
-
-        }
-
-        _pantalla.appendChild(elementos[i]);
-    }
-
-    // ===================================================
-    //  Escribe lo que hay en las opciones seleccionadas del primer 
-    //  select  dentro de los párrafos previamente generados 
-    for (var i = 0; i < select[indice].length; i++) {
-        if (i == 0) {} else {
-
-            elementos[i].innerHTML = select[indice][i].value + " :";
-        }
-    }
-    // ===================================================
 
 }
 
@@ -247,7 +203,6 @@ function gestiona_controles(indice, control) {
     //  los controles por  tipo de etiqueta  y agregarlos a una matriz
     //  para luego pasarla parámetro para ser usados en el programa 
     for (var i = 0; i < control.length; i++) {
-        // console.log(control[i].nodeName);
 
         if (control[i].nodeName == "SELECT") {
 
@@ -275,8 +230,11 @@ function gestiona_controles(indice, control) {
         todos_los_controles.push(control[i]);
         // =============================================
     }
+
     mensaje = "Estas trabajando con el indice " + (indice + 1);
+
     console.log(mensaje);
+
     aplicafuncion(
         indice,
         t_input_select,
@@ -293,14 +251,23 @@ function aplicafuncion(index, select, checkbox, text, radio, label) {
 
     funcion_Control[index](index, select, checkbox, text, radio, label);
 
+    // ==================================
+    //  Solo para pruebas 
     for (var i = 0; i < select.length; i++) {
 
         select[i].addEventListener("input", function(argument) {
 
-            console.log(this.value);
+            if (this.value == "" || this == select[6]) {
+
+            } else {
+
+                console.log(this.value);
+            }
+
         });
 
     }
+    // ==================================
 
 }
 
