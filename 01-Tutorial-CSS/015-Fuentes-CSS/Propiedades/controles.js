@@ -51,26 +51,28 @@ funcion_Control[0] =
             });
 
         }
-
+        //  Eventos para cajas de texto
         for (var i = 0; i < text.length; i++) {
 
             text[i].addEventListener("input",
                 function(argument) {
 
                     if (this == text[0]) {
+
                         propiedades.font_family =
                             "font-family : " + '"' + this.value + '"' + ";";
                         valores[0] = propiedades.font_family;
-                        if (this.value == "") {
 
-                        } else {
+                        if (text[0].value == "") {
 
+                            propiedades.font_family = "";
+                            valores[0] = "";
                         }
 
                     } else if (this == text[1]) {
 
                         if (select[1].value == "url") {
-                            propiedades.src.url = "src : url (" + this.value + ");";
+                            propiedades.src.url = "src: url (" + this.value + ");";
                             valores[1] =
                                 propiedades.src.url;
 
@@ -78,17 +80,30 @@ funcion_Control[0] =
 
                         } else if (select[1].value == "local") {
 
-                            propiedades.src.local = "src : local (" + this.value + ");";
+                            propiedades.src.local = "src: local (" + this.value + ");";
                             valores[1] =
                                 propiedades.src.local;
                             propiedades.src.url = "";
 
-                        }
+                        } else if (select[1].value == "") {
 
+                            propiedades.src.url = "";
+
+                            propiedades.src.local = "";
+
+                            valores[1] = "";
+
+                        }
+                        if (text[1].value == "") {
+
+                            propiedades.src.url = "";
+                            propiedades.src.local = "";
+                            valores[1] = "";
+                        }
                     }
 
-                    muestra_valores(valores);
-
+                    // muestra_valores(valores);
+                    escribePropiedades(valores);
                 })
 
         }
@@ -119,27 +134,26 @@ funcion_Control[0] =
 
                 } else if (this == select[2]) {
 
-                    propiedades.font_display = "font-display : " + this.value + ";";
+                    propiedades.font_display = "font-display: " + this.value + ";";
                     valores[2] = propiedades.font_display;
 
                 } else if (this == select[3]) {
 
-                    propiedades.font_stretch = "font-stretch : " + this.value + ";";
+                    propiedades.font_stretch = "font-stretch: " + this.value + ";";
                     valores[3] = propiedades.font_stretch;
 
                 } else if (this == select[4]) {
 
-                    propiedades.font_style = "font-style : " + this.value + ";";
+                    propiedades.font_style = "font-style: " + this.value + ";";
                     valores[4] = propiedades.font_style;
 
                 } else if (this == select[5]) {
 
-                    propiedades.font_weight = "font-weight : " + this.value + ";";
+                    propiedades.font_weight = "font-weight: " + this.value + ";";
                     valores[5] = propiedades.font_weight;
 
                 } else if (
-                    this ==
-                    select[6] ||
+                    this == select[6] ||
                     this == select[7] ||
                     this == select[8] ||
                     this == select[9] ||
@@ -171,26 +185,37 @@ funcion_Control[0] =
 
                     panel.style.display = "";
 
+                    if (select[6].value == "") {
+
+                        panel.style.display = "none";
+                    }
+
                 } else {
                     panel.style.display = "none";
                 }
-                muestra_valores(valores);
+                // muestra_valores(valores);
+                escribePropiedades(valores);
             });
 
         }
 
-        function muestra_valores(valores) {
+        // function muestra_valores(valores) {
 
-            for (var i = 0; i < valores.length; i++) {
-                if (valores[i] == null) {
+        //     if (valores) {
+        //         for (var i = 0; i < valores.length; i++) {
+        //             if (valores[i] == null) {
 
-                    valores[i] = "";
-                }
-            }
-            console.log(valores);
-        }
+        //                 valores[i] = "";
+        //             }
+        //         }
+        //         console.log(valores);
+        //     } else {
 
-        comportaminetoTexto(index, select);
+        //     }
+
+        // }
+
+        comportaminetoTexto(index, select, valores);
     };
 
 funcion_Control[1] =
@@ -372,24 +397,3 @@ funcion_Control[30] =
 
         cuentaControles(select, checkbox, text, radio, label);
     };
-
-function cuentaControles(select, checkbox, text, radio, label) {
-
-    console.log('======================');
-    console.log("select.length");
-    console.log(select.length);
-    console.log(select);
-    console.log("text.length");
-    console.log(text.length);
-    console.log(text);
-    console.log("radio.length");
-    console.log(radio.length);
-    console.log(radio);
-    console.log("checkbox.length");
-    console.log(checkbox.length);
-    console.log(checkbox);
-    console.log("label.length");
-    console.log(label.length);
-    console.log(label);
-    console.log('======================');
-}
