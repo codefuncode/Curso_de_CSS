@@ -62,6 +62,10 @@ function escribePropiedades(valores) {
     }
     console.log('}');
     console.log("============================================================");
+
+    //  EScribir en pantalla crear nodos 
+    muestraEnpantalla(valores);
+
 }
 
 function muestra_valor_rdio_input(argument) {
@@ -274,5 +278,31 @@ function gestiona_controles(indice, control) {
         t_label
     );
     // =======================================
+
+}
+
+function muestraEnpantalla(valores) {
+    let reglas = document.querySelector(".reglas");
+    let aplicareglas = document.querySelector(".aplicareglas");
+    let parr = [];
+    // let definicion=[];
+    borra_nodos(reglas);
+
+    parr.push(document.createElement("P"));
+    parr[0].innerHTML = "@font-face {";
+    reglas.appendChild(parr[0]);
+
+    for (var i = 0; i < valores.length; i++) {
+        parr.push(document.createElement("P"));
+        parr[i + 1].innerHTML = valores[i];
+        reglas.appendChild(parr[i + 1]);
+
+    }
+
+    parr.push(document.createElement("P"));
+    parr[parr.length - 1].innerHTML = "}";
+    reglas.appendChild(parr[parr.length - 1]);
+
+    console.log("hola");
 
 }

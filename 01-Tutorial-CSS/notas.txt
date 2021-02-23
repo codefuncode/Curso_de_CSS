@@ -1,0 +1,7 @@
+009 completado , falta comentar que debe esttar la caja rellena de texto para que se noten los cambios en le margen negativo
+
+ Analisis de fuentes https://wakamaifondue.com/
+
+==========================================================================
+Trabajar con el modulo 015 fuentes font-variant crear video explicamdo
+==========================================================================

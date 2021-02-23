@@ -47,6 +47,7 @@ funcion_Control[0] =
                 }
 
                 console.log(this.checked);
+                console.log(this);
 
             });
 

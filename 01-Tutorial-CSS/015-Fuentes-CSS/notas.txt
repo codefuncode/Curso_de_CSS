@@ -528,7 +528,7 @@ font-weight   Specifies the weight of a font
 MDN fererencia
 https://devdocs.io/css/css_fonts/opentype_fonts_guide
 https://docs.microsoft.com/es-es/typography/opentype/spec/
-
+ Analisis de fuentes https://wakamaifondue.com/
 font-display
  
 font-family

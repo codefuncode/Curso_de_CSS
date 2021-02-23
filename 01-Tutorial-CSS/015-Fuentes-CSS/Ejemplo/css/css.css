@@ -77,7 +77,8 @@ h1 {
 #cajaoblique {
     margin-top: 25px;
 }
-input, select {
+input,
+select {
     width: 100%;
 }
 #myP {

@@ -55,6 +55,7 @@ var
 
 // ===================================================
 //  Mostrar caja de controles corespondiente 
+
 for (var i = 0; i < select.length; i++) {
 
     select[i].addEventListener('input', selecciona_caja_control);

@@ -43,3 +43,16 @@ div {
 .seis p {
     /*color: red;*/
 }
+.x {
+    /*font-variant: small-caps;*/
+    /*font-variant: common-ligatures small-caps;*/
+    /* Global values */
+    /*font-variant: inherit;*/
+    /*font-variant: initial;*/
+    /*font-variant: unset;*/
+    /*=====================*/
+    /*font-variant: normal;*/
+    /*font-variant: small-caps;*/
+    /*font-variant: initial;*/
+    /*font-variant: inherit;*/
+}

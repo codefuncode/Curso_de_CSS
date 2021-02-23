@@ -56,13 +56,15 @@ Iconos CSS
 Enlaces CSS
 Listas CSS
 Tablas CSS
-Pantalla CSS
+CSS mostrar/ ocultar
 Ancho máximo de CSS
 Posición CSS
 CSS desbordamiento
-CSS Float
+CSS flotar y despejar
 Bloque en línea CSS
 CSS Align
+
+=====================
 Combinadores CSS
 Seudoclase CSS
 Seudoelemento CSS
