@@ -1,19 +1,19 @@
 * {}
 @font-face {
     font-family: Lettersketch;
-    src: url('../Lettersketch-ow1wV.ttf');
+    src: url('../font/Lettersketch-ow1wV.ttf');
 }
 @font-face {
     font-family: Helveticamazing;
-    src: url('../Helveticamazing.ttf');
+    src: url('../font/Helveticamazing.ttf');
 }
 @font-face {
     font-family: Sketchzone;
-    src: url('../Sketchzone.otf');
+    src: url('../font/Sketchzone.otf');
 }
 @font-face {
     font-family: Sunset;
-    src: url('../Sunset-Boulevard.otf');
+    src: url('../font/Sunset-Boulevard.otf');
 }
 div {
     border: 1px solid black;
@@ -27,9 +27,12 @@ div {
 }
 .dos p {
     font-size: 50px;
+    font-family: Sketchzone;
+    /*font-style: oblique -50deg;*/
 }
 .tres p {
     font-weight: 900;
+    font-variant: small-caps;
 }
 .cuatro p {
     /*font-style: normal;*/
@@ -44,7 +47,7 @@ div {
     /*color: red;*/
 }
 .x {
-    /*font-variant: small-caps;*/
+    font-variant: small-caps;
     /*font-variant: common-ligatures small-caps;*/
     /* Global values */
     /*font-variant: inherit;*/
