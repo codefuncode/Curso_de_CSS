@@ -1,1 +1,8 @@
-notas.txt
+
+
+
+ Referencias
+
+ https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+
+ https://stackoverflow.com/questions/11504703/css3-zooming-on-mouse-cursor
