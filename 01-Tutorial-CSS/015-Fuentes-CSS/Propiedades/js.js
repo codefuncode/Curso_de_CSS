@@ -52,7 +52,7 @@ var
         option_css_fonts_guide,
         option_css_fonts
     );
-
+console.log(opciones_todas);
 // ===================================================
 //  Mostrar caja de controles corespondiente 
 
