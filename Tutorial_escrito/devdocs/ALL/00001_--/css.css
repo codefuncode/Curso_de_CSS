@@ -1,0 +1,44 @@
+/*
+Los nombres de propiedades que están prefijados con:,
+como el nombre de ejemplo, representan propiedades
+personalizadas que contienen un valor que se puede
+usar en otras declaraciones utilizando la función var().
+
+Las propiedades personalizadas se encuentran al alcance 
+del elemento (s) en el que se declaran, y participan en 
+la cascada: el valor de una propiedad personalizada es 
+que de la declaración decidida por el algoritmo en cascada.
+*/
+
+/*
+Referencia https://devdocs.io/css/--*
+*/
+
+:root {
+	--first-color: yellow;
+	--second-color: red;
+	--nombhre: green;
+}
+
+#firstParagraph {
+	background-color: var(--nombhre);
+	color: var(--second-color);
+}
+
+#secondParagraph {
+	background-color: var(--second-color);
+	color: var(--first-color);
+}
+
+#container {
+	--first-color: black;
+}
+
+#thirdParagraph {
+	background-color: var(--first-color);
+	color: var(--second-color);
+}
+
+p {
+	padding: 20px;
+}

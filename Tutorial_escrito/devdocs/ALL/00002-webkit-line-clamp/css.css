@@ -1,0 +1,48 @@
+.uno p {
+	background-color: blue;
+	width: 300px;
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-line-clamp: 1;
+	overflow: hidden;
+}
+
+.dos p {
+	background-color: red;
+	width: 300px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+
+.tres p {
+	background-color: green;
+	width: 300px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+}
+
+.cuatro p {
+	background-color: yellow;
+	width: 300px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+	overflow: hidden;
+}
+
+.cinco p {
+	background-color: orange;
+	width: 300px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 5;
+	overflow: hidden;
+}
+
+/*https://devdocs.io/css/box-orient*/
+
+/*https://devdocs.io/css/-webkit-line-clamp*/

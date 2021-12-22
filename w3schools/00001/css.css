@@ -1,0 +1,16 @@
+#main {
+  width: 70px;
+  height: 300px;
+  border: 1px solid #c3c3c3;
+  display: flex;
+  /* Debes declarar el valor de la propiedad display en felx  */
+  flex-wrap: wrap;
+  /*Debes declarar la propiedad flex-wrap para que funcione adecuadamente*/
+  align-content: center;
+  /* Uso de la propiedad  aling-content con el valor center */
+}
+
+#main div {
+  width: 70px;
+  height: 70px;
+}
