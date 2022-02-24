@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <style type="text/css">
+      body {
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+      .container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+
+  border: 2px solid var(--gs0);
+  border-radius: 8px;
+  height: 100vh;
+}
+
+.container div {
+	margin: 0px;
+  scroll-snap-align: start;
+padding: 0px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}
+.container div:nth-child(1) {
+  /*background: hotpink;*/
+  color: white;
+}
+.container div:nth-child(2) {
+  /*background: azure;*/
+}
+.container div:nth-child(3) {
+  /*background: blanchedalmond;*/
+}
+.container div:nth-child(4) {
+  /*background: lightcoral;*/
+  color: white;
+}
+img	{
+	width: 100%;
+	height: 100%;
+}
+    </style>
+    <title>
+      Document
+    </title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <img alt="" src="https://www.mactualidad.com/wp-content/uploads/2013/06/fondo-pantalla-mac-19.jpg"/>
+      </div>
+      <div>
+        <img alt="" src="http://www.gratistodo.com/wp-content/uploads/2016/12/elefantes-wallpapers-17.jpg"/>
+      </div>
+      <div>
+        <img alt="" src="https://www.xtrafondos.com/wallpapers/resoluciones/19/carretera-de-anochecer-nubes-y-bosque_1920x1080_3040.jpg"/>
+      </div>
+      <div>
+        <img alt="" src="https://www.mactualidad.com/wp-content/uploads/2013/06/fondo-pantalla-mac-19.jpg"/>
+      </div>
+    </div>
+  </body>
+</html>

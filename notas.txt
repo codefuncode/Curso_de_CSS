@@ -10,3 +10,26 @@ https://css-tricks.com/
 https://localhost/Proyectos/W3Schools-Offline-Version/Carpeta/W3Schools/default.html
 https://www.w3schools.com/default.asp
 
+1 Blur Menu
+2 CSS3D Clouds
+3 Logos en puro CSS
+4 Barra de navegación por Jan Kadera
+5 Paneles de imágenes deslizándose
+6 Anillo doble
+7 Flexbox
+8 Un menú de navegación colorido
+9 Barras de progreso en CSS3
+10 Animate.css
+11 Spinkit
+12 Buttons
+13 FlipSwitch
+14 Hint.css
+15 Colors.css
+16 Voxels.css
+17 Tipograf
+18 Spinners
+19 Indicadores de línea de carga
+20 CSS Loader
+21 Image Hover
+22 Hue.css
+23 Materialize
