@@ -10,6 +10,14 @@ https://css-tricks.com/
 https://localhost/Proyectos/W3Schools-Offline-Version/Carpeta/W3Schools/default.html
 https://www.w3schools.com/default.asp
 
+
+
+https://www.blobmaker.app/
+https://getwaves.io/
+https://cssbuttons.io/
+https://neumorphism.io/#e0e0e0
+
+
 1 Blur Menu
 2 CSS3D Clouds
 3 Logos en puro CSS
