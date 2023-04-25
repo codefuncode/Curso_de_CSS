@@ -1,3 +1,0 @@
-https://devdocs.io/css-flexible-box-layout/
-
-https://devdocs.io/css/css_flexible_box_layout/relationship_of_flexbox_to_other_layout_methods#writing_modes

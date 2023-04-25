@@ -1,3 +1,0 @@
- Proyecto  font-face dinámico
-
- https://github.com/codefuncode/Curso-de-CSS/tree/master/01-Tutorial-CSS/015-Fuentes-CSS/Propiedades
